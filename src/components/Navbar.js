@@ -30,7 +30,7 @@ export default function Navbar() {
               <li>
                 <hr class="dropdown-divider"/>
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Kaikki tuotteet</a></li>
             </ul>
           </li>
           <li class="nav-item">
