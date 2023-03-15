@@ -1,0 +1,12 @@
+.navbar {
+    margin-bottom: 100px;
+}
+
+.carousel .carousel-item {
+    max-height:450px;
+}
+
+.carousel-item img {
+    object-fit:cover;
+    max-height:450px;
+}
