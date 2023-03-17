@@ -18,6 +18,7 @@ function HomeCarousel() {
   };
 
   return (
+    
     <Carousel activeIndex={index} onSelect={handleSelect}>
        {data.map((slide, i) => {
         return (
@@ -32,6 +33,8 @@ function HomeCarousel() {
       })}
       
     </Carousel>
+    
   );
 }
+
 export default HomeCarousel;
