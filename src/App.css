@@ -3,10 +3,15 @@
 }
 
 .carousel .carousel-item {
-    max-height:450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height:400px;
+    max-width:900px;
 }
 
 .carousel-item img {
     object-fit:cover;
-    max-height:450px;
+    max-height:400px;
+    max-width:900px;
 }

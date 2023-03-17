@@ -1,21 +1,26 @@
-import './App.css';
-import Navbar from './components/Navbar';
+import "./App.css";
+import Navbar from "./components/Navbar";
 import HomeCarousel from "./HomeCarousel/HomeCarousel";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Row, Col } from "react-bootstrap";
 
 function App() {
   return (
- 
- <>  <div className='navbar'>
-  <Navbar/>
-  </div>
-  
+    <>
+      {" "}
+      <div className="navbar">
+        <Navbar />
+      </div>
 
-<div className="app">
-<HomeCarousel/>
-</div>
-
-</>
-
+      
+      <Row className="justify-content-center">
+        <Col md={6}>
+          <div className="app">
+            <HomeCarousel />
+          </div>
+        </Col>
+      </Row>
+    </>
   );
 }
 
