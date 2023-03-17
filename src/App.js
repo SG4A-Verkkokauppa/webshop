@@ -15,7 +15,7 @@ function App() {
       
       <Row className="justify-content-center">
         <Col md={6}>
-          <div className="app">
+          <div className="App">
             <HomeCarousel />
           </div>
         </Col>
