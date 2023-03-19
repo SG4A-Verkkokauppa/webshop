@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import HomeCarousel from "./HomeCarousel/HomeCarousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col, Container } from "react-bootstrap";
+import GridCard from "./components/GridCard";
 
 function App() {
   return (
@@ -17,6 +18,14 @@ function App() {
         <Col className="Carousel">
           <div >
             <HomeCarousel />
+          </div>
+        </Col>
+      </Container>
+
+      <Container className="GridCard">
+      <Col >
+          <div >
+            <GridCard />
           </div>
         </Col>
       </Container>

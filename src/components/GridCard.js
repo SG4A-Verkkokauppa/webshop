@@ -6,7 +6,7 @@ export default function GridCard() {
     <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
     <div class="card">
-      <img src="./images/kuva1.jpg" class="card-img-top" alt="Tässä pitäisi olla kuva"/>
+      <img src="..." class="card-img-top" alt="Tässä pitäisi olla kuva"/>
       <div class="card-body">
         <h5 class="card-title">Paita</h5>
         <p class="card-text">Tässä on meidän paras paita hienossa tervetulo alennuksessa.</p>
