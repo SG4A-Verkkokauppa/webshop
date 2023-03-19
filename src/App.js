@@ -13,21 +13,18 @@ function App() {
         <Navbar />
       </div>
 
-      
       <Container fluid>
-        <Col className="Carousel">
-          <div >
-            <HomeCarousel />
-          </div>
-        </Col>
-      </Container>
+        <Row className="Carousel">
+          <Col>
+              <HomeCarousel />
+          </Col>
+        </Row>
 
-      <Container className="GridCard">
-      <Col >
-          <div >
-            <GridCard />
-          </div>
-        </Col>
+        <Row className="Gridcard">
+          <Col>
+              <GridCard />
+          </Col>
+        </Row>
       </Container>
     </>
   );

@@ -1,9 +1,12 @@
 import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 
 export default function GridCard() {
   return (
     <>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <Container>
+      <Row class="row row-cols-1 row-cols-md-3 g-4">
+      <Col>
   <div class="col">
     <div class="card">
       <img src="..." class="card-img-top" alt="Tässä pitäisi olla kuva"/>
@@ -13,6 +16,9 @@ export default function GridCard() {
       </div>
     </div>
   </div>
+  </Col>
+
+  <Col>
   <div class="col">
     <div class="card">
       <img src="..." class="card-img-top" alt="..."/>
@@ -22,6 +28,9 @@ export default function GridCard() {
       </div>
     </div>
   </div>
+  </Col>
+
+  <Col>
   <div class="col">
     <div class="card">
       <img src="..." class="card-img-top" alt="..."/>
@@ -31,6 +40,8 @@ export default function GridCard() {
       </div>
     </div>
   </div>
+  </Col>
+<Col>
   <div class="col">
     <div class="card">
       <img src="..." class="card-img-top" alt="..."/>
@@ -40,7 +51,9 @@ export default function GridCard() {
       </div>
     </div>
   </div>
-</div>
+</Col>
+</Row>
+</Container>
     </>
     )
 }

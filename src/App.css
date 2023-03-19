@@ -1,16 +1,27 @@
-
+@media (max-width: 900px) {
+    .carousel {
+      width:auto;
+      height:auto;
+    }
+}
 
 .navbar {
     margin-bottom: 100px;
 }
 
+.carousel {
+    width: 1200px;
+    height:500px;
+    margin: auto;
+    align-items: center;
+  }
 
-    .Carousel {
-        width: 1000px;
+    /* .Carousel {
+        width: 500px;
         height:100px;
         margin: auto;
         align-items: center;
-    }
+    } */
 
 
 /* .App-header {
@@ -20,7 +31,12 @@
     justify-content: center;
   } */
 
-.GridCard{
+/* .GridCard{
+    padding-top: 20px;
     margin-top: 400px;
+} */
+
+.row {
+   padding-top: 100px;
 }
   
