@@ -4,17 +4,21 @@
     margin-bottom: 100px;
 }
 
-.d-block{
-    height: 500px;    
-}
 
-.App-header {
-    
+    .Carousel {
+        width: 1000px;
+        height:100px;
+        margin: auto;
+        align-items: center;
+    }
+
+
+/* .App-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+  } */
 
-  
+
   

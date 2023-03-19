@@ -2,7 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import HomeCarousel from "./HomeCarousel/HomeCarousel";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 
 function App() {
   return (
@@ -13,13 +13,13 @@ function App() {
       </div>
 
       
-      <Row className="justify-content-center">
-        <Col md={6}>
-          <div className="App">
+      <Container fluid>
+        <Col className="Carousel">
+          <div >
             <HomeCarousel />
           </div>
         </Col>
-      </Row>
+      </Container>
     </>
   );
 }
