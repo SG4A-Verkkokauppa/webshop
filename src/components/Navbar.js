@@ -36,6 +36,9 @@ export default function Navbar() {
           <li class="nav-item">
             <a class="nav-link" href="#">Yhteystiedot</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ostoskori</a>
+          </li>
         </ul>
         <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
