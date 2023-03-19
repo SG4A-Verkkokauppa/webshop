@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default function Navbar() {
   return (
     <>
@@ -37,7 +38,7 @@ export default function Navbar() {
             <a class="nav-link" href="#">Yhteystiedot</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Ostoskori</a>
+            <a class="nav-link" href="ShoppingCard.js">Ostoskori</a>
           </li>
         </ul>
         <form class="d-flex mt-3" role="search">
