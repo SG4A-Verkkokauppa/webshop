@@ -36,6 +36,10 @@
    padding-top: 50px;
 }
   
+.col{
+margin-bottom: 10px;
+}
+
 
 
 @media (min-width: 1025px) {
