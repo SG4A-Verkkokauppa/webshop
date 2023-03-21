@@ -24,7 +24,7 @@ export default function GridCard() {
       <img src="..." class="card-img-top" alt="..."/>
       <div class="card-body">
         <h5 class="card-title">Kynä</h5>
-        <p class="card-text">Tässä n tosi tyylikäs kynä.</p>
+        <p class="card-text">Tässä on tosi tyylikäs kynä.</p>
       </div>
     </div>
   </div>

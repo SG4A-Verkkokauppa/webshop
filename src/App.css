@@ -6,7 +6,6 @@
 }
 
 .navbar {
-    margin-bottom: 100px;
     height: 100px;
 }
 
@@ -32,13 +31,9 @@
     justify-content: center;
   } */
 
-/* .GridCard{
-    padding-top: 20px;
-    margin-top: 400px;
-} */
 
 .row {
-   padding-top: 100px;
+   padding-top: 50px;
 }
   
 
