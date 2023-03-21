@@ -16,28 +16,28 @@ function BasicExample() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <Nav.Link href="#home">Koti</Nav.Link>
+            <Nav.Link href="#link">Linkki</Nav.Link>
+            <NavDropdown title="Tuotteet" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Paita</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+                Juliste
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Kumi</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                Kaikki tuotteet
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Form className="d-flex">
                   <Form.Control
                     type="search"
-                    placeholder="Search"
+                    placeholder="Haku"
                     className="me-2"
                     aria-label="Search"
                   />
-                  <Button class="btn btn-outline-light" >Search</Button>
+                  <Button class="btn btn-outline-light" >Etsi</Button>
                   </Form> 
 
                   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-cart3" viewBox="0 0 16 16" className='cart'>
