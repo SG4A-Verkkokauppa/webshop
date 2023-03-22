@@ -70,7 +70,7 @@ function GridExample() {
       {Array.from({ length: 4 }).map((_, idx) => (
         <Col>
           <Card>
-            <Card.Img variant="top" src="Tähän se hikinen kuva" />
+            <Card.Img variant="top" src="https://picsum.photos/200/300?grayscale" />
             <Card.Body>
               <Card.Title>Paita</Card.Title>
               <Card.Text>
