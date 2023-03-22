@@ -2,18 +2,25 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home"
-
 import React from "react";
+import {useState,useEffect} from 'react';
 
-
-//const URL ='http://localhost:8888/maagista/';
+const URL ='http://localhost/Verkkokauppa/webshop-backend/';
 
 function App(){
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    if ('cart' in localStorage) {
+      setCart(JSON.parse(localStorage.getItem('cart')));
+    }
+   }, [])
+
   return (
     <>
       {" "}
       <div className="navbar">
-        <Navbar />
+        <Navbar url={URL} cart={cart}/>
       </div>
 
 
