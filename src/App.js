@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home"
+import Footer from './components/Footer';
 import React from "react";
 import {useState,useEffect} from 'react';
 
@@ -26,7 +27,7 @@ function App(){
 
               <Home />
             
-
+<Footer/>
     </>
     
   
