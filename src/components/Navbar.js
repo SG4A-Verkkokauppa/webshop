@@ -54,7 +54,7 @@ function BasicExample({url,cart}) {
                     className="me-2"
                     aria-label="Search"
                   />
-                  <Button variant='dark' class="btn btn-outline-light" >Etsi</Button>
+                  <Button variant='dark' variant="outline-light" >Etsi</Button>
                   </Form> 
                  
 <Button bg="transparent" variant='transparent' className="cartButton" >
