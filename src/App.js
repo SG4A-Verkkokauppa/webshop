@@ -7,7 +7,7 @@ import React from "react";
 import {useState,useEffect} from 'react';
 
 
-
+document.body.style.backgroundColor = "#1e2034";
 const URL ='http://localhost/Verkkokauppa/webshop-backend/';
 
 function App(){
@@ -51,7 +51,7 @@ function App(){
       <div className="navbar">
         <Navbar url={URL} cart={cart}/>
       </div>
-
+  
 
               <Home />
             
