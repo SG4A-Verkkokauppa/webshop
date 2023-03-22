@@ -21,6 +21,7 @@ function App() {
 
 
               <Home />
+              <Footer/>
 
     </>
     
