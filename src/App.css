@@ -23,8 +23,13 @@
 
 .cart{
   margin-left: 20px;
+  background-color: orange;
 }
   
+.cartButton{
+  padding-left: 100px;
+}
+
 
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
   font-size: 1rem;
