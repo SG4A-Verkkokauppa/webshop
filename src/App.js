@@ -8,22 +8,9 @@ import React from "react";
 
 //const URL ='http://localhost:8888/maagista/';
 
-function App() {
-  const [cart, setCart] = useState([]);
-
-  useEffect(() => {
-    if ('cart' in localStorage) {
-      setCart(JSON.parse(localStorage.getItem('cart')));
-    }
-   }, [])
-
-
-
-
+function App(){
   return (
     <>
-
-      
       {" "}
       <div className="navbar">
         <Navbar />
