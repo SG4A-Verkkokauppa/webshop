@@ -1,7 +1,7 @@
-//import React from 'react'
-//import { Container, Row, Col } from 'react-bootstrap'
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 
-/*export default function GridCard() {
+export default function GridCard() {
   return (
     <>
     <Container>
@@ -9,7 +9,7 @@
       <Col>
   <div class="col">
     <div class="card">
-      <img src="img_kuva1.jpg" class="card-img-top" alt="Tässä pitäisi olla kuva"/>
+      <img src="https://picsum.photos/200/300?grayscale" class="card-img-top" alt="Tässä pitäisi olla kuva"/>
       <div class="card-body">
         <h5 class="card-title">Paita</h5>
         <p class="card-text">Tässä on meidän paras paita hienossa tervetulo alennuksessa.</p>
@@ -21,7 +21,7 @@
   <Col>
   <div class="col">
     <div class="card">
-      <img src="..." class="card-img-top" alt="..."/>
+      <img src="https://picsum.photos/200/300?grayscale" class="card-img-top" alt="..."/>
       <div class="card-body">
         <h5 class="card-title">Kynä</h5>
         <p class="card-text">Tässä on tosi tyylikäs kynä.</p>
@@ -33,7 +33,7 @@
   <Col>
   <div class="col">
     <div class="card">
-      <img src="..." class="card-img-top" alt="..."/>
+      <img src="https://picsum.photos/200/300?grayscale" class="card-img-top" alt="..."/>
       <div class="card-body">
         <h5 class="card-title">Toinen paita</h5>
         <p class="card-text">Tässä on vieläkin tyylikkäämpi paita jos se on edes mahdollista.</p>
@@ -44,7 +44,7 @@
 <Col>
   <div class="col">
     <div class="card">
-      <img src="..." class="card-img-top" alt="..."/>
+      <img src="https://picsum.photos/200/300?grayscale" class="card-img-top" alt="..."/>
       <div class="card-body">
         <h5 class="card-title">Kumi</h5>
         <p class="card-text">Jotta voit pyyhkiä ylimääräisen magian.</p>
@@ -56,11 +56,11 @@
 </Container>
     </>
     )
-}*/
+}
 
 
 
-import Card from 'react-bootstrap/Card';
+/*import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
@@ -84,4 +84,4 @@ function GridExample() {
   );
 }
 
-export default GridExample;
+export default GridExample;*/
