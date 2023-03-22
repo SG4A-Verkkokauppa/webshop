@@ -1,7 +1,7 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+//import React from 'react'
+//import { Container, Row, Col } from 'react-bootstrap'
 
-export default function GridCard() {
+/*export default function GridCard() {
   return (
     <>
     <Container>
@@ -9,7 +9,7 @@ export default function GridCard() {
       <Col>
   <div class="col">
     <div class="card">
-      <img src="..." class="card-img-top" alt="Tässä pitäisi olla kuva"/>
+      <img src="img_kuva1.jpg" class="card-img-top" alt="Tässä pitäisi olla kuva"/>
       <div class="card-body">
         <h5 class="card-title">Paita</h5>
         <p class="card-text">Tässä on meidän paras paita hienossa tervetulo alennuksessa.</p>
@@ -56,4 +56,32 @@ export default function GridCard() {
 </Container>
     </>
     )
+}*/
+
+
+
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+
+function GridExample() {
+  return (
+    <Row xs={1} md={2} className="g-4">
+      {Array.from({ length: 4 }).map((_, idx) => (
+        <Col>
+          <Card>
+            <Card.Img variant="top" src="https://picsum.photos/200/300?grayscale" />
+            <Card.Body>
+              <Card.Title>Paita</Card.Title>
+              <Card.Text>
+                Ollaan kaikki samiksia
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  );
 }
+
+export default GridExample;
