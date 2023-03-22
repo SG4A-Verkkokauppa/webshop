@@ -23,7 +23,7 @@
 
 .cart{
   margin-left: 20px;
-  background-color: orange;
+  background-color: transparent;
 }
   
 .cartButton{
@@ -47,6 +47,7 @@
 .bg-grey {
   background-color: #eae8e8;
 }
+
 
 
 

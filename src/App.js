@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import React from "react";
 import {useState,useEffect} from 'react';
 
+
+
 const URL ='http://localhost/Verkkokauppa/webshop-backend/';
 
 function App(){
@@ -16,6 +18,32 @@ function App(){
       setCart(JSON.parse(localStorage.getItem('cart')));
     }
    }, [])
+
+   function addToCart(product) {
+    if (cart.some(item => item.id === product.id)) {
+      const existingProduct = cart.filter(item => item.id ===product.id);
+      updateAmount(parseInt(existingProduct[0].amount) + 1,product);
+    } else {
+      product['amount'] = 1;
+      const newCart = [...cart,product];
+      setCart(newCart);
+      localStorage.setItem('cart',JSON.stringify(newCart));
+    }
+  }
+
+  function removeFromCart(product) {
+    const itemsWithoutRemoved = cart.filter(item => item.id !== product.id);
+    setCart(itemsWithoutRemoved);
+    localStorage.setItem('cart',JSON.stringify(itemsWithoutRemoved));
+  }
+
+  function updateAmount(amount,product) {
+    product.amount = amount;
+    const index = cart.findIndex((item => item.id === product.id));
+    const modifiedCart = Object.assign([...cart],{[index]: product});
+    setCart(modifiedCart);
+    localStorage.setItem('cart',JSON.stringify(modifiedCart));
+  }
 
   return (
     <>
