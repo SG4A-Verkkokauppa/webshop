@@ -1,54 +1,58 @@
-import React from 'react'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Form, Button } from 'react-bootstrap';
+
+ 
 
 
-export default function Navbar() {
+
+function BasicExample() {
   return (
-    <>
-   <nav class="navbar navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Maagista.fi</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Valikko</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Etusivu</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Tuotteet
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Paidat</a></li>
-              <li><a class="dropdown-item" href="#">Kynät</a></li>
-              <li><a class="dropdown-item" href="#">Juliste</a></li>
-              <li>
-                <hr class="dropdown-divider"/>
-              </li>
-              <li><a class="dropdown-item" href="#">Kaikki tuotteet</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Yhteystiedot</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="ShoppingCard.js">Ostoskori</a>
-          </li>
-        </ul>
-        <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button class="btn btn-success" type="submit">Etsi</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</nav>
-    </>
-  )
+    <Navbar bg="dark" variant='dark' fixed="top" className='navbar'>
+      <Container>
+        <Navbar.Brand href="#home">Maagista.fi</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Koti</Nav.Link>
+            <Nav.Link href="#link">Linkki</Nav.Link>
+            <NavDropdown title="Tuotteet" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Paita</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Juliste
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Kumi</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Kaikki tuotteet
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Form className="d-flex">
+                  <Form.Control
+                    type="search"
+                    placeholder="Haku"
+                    className="me-2"
+                    aria-label="Search"
+                  />
+                  <Button class="btn btn-outline-light" >Etsi</Button>
+                  </Form> 
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-cart3" viewBox="0 0 16 16" className='cart'>
+  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+</svg>
+
+    
+                
+                
+  
+        </Navbar.Collapse>
+        
+      </Container>
+    </Navbar>
+  );
 }
+
+export default BasicExample;
