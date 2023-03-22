@@ -19,7 +19,7 @@ function App(){
 
               <Home />
             
-<Footer/>
+<Footer/>yu768
     </>
     
   
