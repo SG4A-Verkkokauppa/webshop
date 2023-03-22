@@ -18,7 +18,7 @@ function App(){
 
 
               <Home />
-              <Footer/>
+            
 
     </>
     
