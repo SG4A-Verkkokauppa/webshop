@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import Footer from "./components/Footer";
 import React from "react";
 
+
 //const URL ='http://localhost:8888/maagista/';
 
 function App() {
