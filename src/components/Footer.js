@@ -10,28 +10,28 @@ export default function Footer() {
     <div>
     <table>
             <tr>
-                <th>Maagista.fi oy</th>
-                <th>Ota yhteyttä</th>
-                <th><a href='www.iltalehti.fi'> linkki</a></th>
+                <th>MAAGISTA.FI OY</th>
+                <th>OTA YHTEYTTÄ</th>
+                <th><a href=''> Toimitus</a></th>
             </tr>
             <tr>
                 <td>Meemimäki 7</td>
-                <td>Käyntiosoite</td>
-                <td>Käyntiosoite</td>
+                <td>meemila@meemi.com</td>
+                <td><a href=''> Maksutavat</a></td>
             </tr>
             <tr>
                 <td>123456 Meemilä</td>
-                <td>Oulu10, Saaristonkatu 8</td>
-                <td>Oulu10, Saaristonkatu 8</td>
+                <td>p. 000 3456789</td>
+                <td><a href=''> Yritys</a></td>
             </tr>
             <tr>
-               <td>p. 0123456</td>
-               <td>p.08 558 558 00</td>
+               <td></td>
+               <td></td>
                </tr>
 
             <tr>
-               <td>meemila@meemi.com</td>
-               <td>oulu10@ouka.fi</td>
+               <td></td>
+               <td></td>
             </tr>
 
     </table>
