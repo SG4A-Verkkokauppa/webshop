@@ -24,7 +24,7 @@ function BasicExample({url,cart}) {
 
 
   return (
-    <Navbar bg="dark" variant='dark' fixed="top" className='navbar'>
+    <Navbar fixed="top" className='navbar'>
       <Container>
         <Navbar.Brand href="#home">Maagista.fi</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -47,6 +47,7 @@ function BasicExample({url,cart}) {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
+         
           <Form className="d-flex">
                   <Form.Control
                     type="search"

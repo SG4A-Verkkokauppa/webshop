@@ -62,6 +62,10 @@ width: 600px;
   height: auto;
 }
 
+.cartButton{
+  align-items: end;
+}
+
 
 
 
