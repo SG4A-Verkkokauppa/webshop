@@ -1,11 +1,12 @@
 .g-4{
 width: 600px;
-height: min-content;
 }
+
 
 .card-img-top{
   background-color: #EAD444;
 }
+
 
 .navbar {
   height: 100px;
@@ -35,6 +36,7 @@ height: min-content;
   background-color: transparent;
 }
   
+
 .cartButton{
   padding-left: 100px;
 }
@@ -57,7 +59,13 @@ height: min-content;
   background-color: #eae8e8;
 }
 
+.karuselli{
+ height: 400px;
+}
 
+.d-block{
+  height: 400px;
+}
 
 
 

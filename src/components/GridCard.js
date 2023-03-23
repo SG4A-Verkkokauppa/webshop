@@ -59,29 +59,3 @@ export default function GridCard() {
 }
 
 
-
-/*import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-
-function GridExample() {
-  return (
-    <Row xs={1} md={2} className="g-4">
-      {Array.from({ length: 4 }).map((_, idx) => (
-        <Col>
-          <Card>
-            <Card.Img variant="top" src="https://picsum.photos/200/300?grayscale" />
-            <Card.Body>
-              <Card.Title>Paita</Card.Title>
-              <Card.Text>
-                Ollaan kaikki samiksia
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      ))}
-    </Row>
-  );
-}
-
-export default GridExample;*/
