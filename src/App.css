@@ -13,14 +13,6 @@ width: 600px;
 }
 
 
-.carousel {
-  width: 1200px;
-  height:500px;
-  margin: auto;
-  align-items: center;
-}
-
-
 .row {
    padding-top: 50px;
 }
@@ -60,12 +52,16 @@ width: 600px;
 }
 
 .karuselli{
- height: 400px;
+ height: auto;
+ width: auto;
+ margin: auto;
+ align-items: center;
 }
 
 .d-block{
-  height: 400px;
+  height: auto;
 }
+
 
 
 

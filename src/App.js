@@ -47,15 +47,11 @@ function App(){
 
   return (
     <>
-      {" "}
-      <div className="navbar">
         <Navbar url={URL} cart={cart}/>
-      </div>
-  
 
               <Home />
             
-<Footer/>yu768
+<Footer/>
     </>
     
   
