@@ -24,7 +24,7 @@ function BasicExample({url,cart}) {
 
 
   return (
-    <Navbar fixed="top" className='navbar'>
+    <Navbar bg="dark" variant='dark' fixed="top" className='navbar'>
       <Container>
         <Navbar.Brand href="#home">Maagista.fi</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
