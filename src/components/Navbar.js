@@ -36,7 +36,7 @@ function BasicExample({url,cart}) {
             {categories.map(category => (
                   <NavDropdown.Item href="#">
                   <li key={category.tuoteryhma_id}>
-                  {<Link 
+                  {<Link className='linkki'
                       to={'/products/' + category.tuoteryhma_id}>{category.tuoteryhma_nimi}
                     </Link>}
                   </li>
