@@ -70,6 +70,9 @@ width: 600px;
   color: black;
 }
 
+.navbar-nav{
+  margin-left: 15px;
+}
 
     @media (min-width: 992px) {
     .card-registration-2 .bg-grey {
