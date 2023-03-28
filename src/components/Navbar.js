@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import React,{useState,useEffect} from 'react'; 
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function BasicExample({url,cart}) {
@@ -36,8 +36,9 @@ function BasicExample({url,cart}) {
             {categories.map(category => (
                   <NavDropdown.Item href="#">
                   <li key={category.tuoteryhma_id}>
-                    
-                    {category.tuoteryhma_nimi}
+                  {<Link 
+                      to={'/products/' + category.tuoteryhma_id}>{category.tuoteryhma_nimi}
+                    </Link>}
                   </li>
                   </NavDropdown.Item>
                 ))}

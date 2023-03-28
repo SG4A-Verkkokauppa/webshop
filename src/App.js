@@ -64,7 +64,7 @@ function App(){
         <div className='container'>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/products/:categoryId" element={<Products url={URL}addToCart={addToCart} />} />
+                <Route path="/Tuotteet/:tuoteryhma_id" element={<Products url={URL}addToCart={addToCart} />} />
                 <Route path="/order" element={<Order cart={cart} />} />
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />

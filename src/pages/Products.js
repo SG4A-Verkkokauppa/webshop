@@ -13,8 +13,8 @@ export default function Products({url}) {
     axios.get(url + 'products/products.php/' + params.tuoteryhma_id)
     .then((response)=>{
       const json = response.data
-      setCategoryName(json.category)
-      setProducts(json.products)
+      setCategoryName(json.tuoteryhma_nimi)
+      setProducts(json.tuotteen_nimi)
     }).catch (error =>{
       alert(error.response === undefined ? error : error.response.data.error)
     })
@@ -24,8 +24,8 @@ export default function Products({url}) {
     <>
     <h3>{categoryName}</h3>
     {products.map(product => (
-      <div key={product.id}>
-          {product.name}
+      <div key={product.tuotteen_id}>
+          {product.tuotteen_nimi}
       </div>
     ))}
     </>
