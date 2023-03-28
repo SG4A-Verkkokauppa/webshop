@@ -5,7 +5,10 @@ import {Link, useParams} from 'react-router-dom'
 
 // Tuotteiden näyttäminen tuoteryhmän mukaan:
 
-export default function Products({url}) {
+// Tuotteiden näyttäminen tuoteryhmän mukaan:
+
+
+export default function Products({url,addToCart}) {
   const [categoryName, setCategoryName] = useState('')
   const [products, setProducts] = useState([])
 
@@ -28,6 +31,7 @@ export default function Products({url}) {
     {products.map(product => (
       <div key={product.tuotteen_id}>
           {product.tuotteen_nimi}
+          <button className='btn btn-primary' type="button" onClick={e => addToCart(product)}>Add</button>
       </div>
     ))}
     </div>

@@ -6,6 +6,7 @@ import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import React,{useState,useEffect} from 'react'; 
 import { Link } from 'react-router-dom';
+import Cart from './Cart';
 
 
 function BasicExample({url,cart}) {
@@ -26,17 +27,16 @@ function BasicExample({url,cart}) {
   return (
     <Navbar bg="dark" variant='dark' fixed="top" className='navbar'>
       <Container>
-        <Navbar.Brand href="#home">Maagista.fi</Navbar.Brand>
+      <Link className="navbar-brand" to="/">Maagista.fi</Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Koti</Nav.Link>
             <Nav.Link href="#link">Linkki</Nav.Link>
             <NavDropdown title="Tuotteet" id="basic-nav-dropdown">
             {categories.map(category => (
                   <NavDropdown.Item href="#">
                   <li key={category.tuoteryhma_id}>
-                  {<Link 
+                  {<Link className='linkki'
                       to={'/products/' + category.tuoteryhma_id}>{category.tuoteryhma_nimi}
                     </Link>}
                   </li>
@@ -57,17 +57,14 @@ function BasicExample({url,cart}) {
                     aria-label="Search"
                   />
                   <Button variant="outline-light" >Etsi</Button>
-                  </Form> 
-                 
-<Button bg="transparent" variant='transparent' className="cartButton" >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-cart3" viewBox="0 0 16 16" className='cart'>
-  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-</svg>
-</Button>
+                  </Form>               
+                  <ul className='navbar-nav ml-auto'>
+            <li className='nav-item'>
+              <Cart cart={cart} />
+            </li>
+          </ul>
 
-                
-                
-  
+
         </Navbar.Collapse>
         
       </Container>
