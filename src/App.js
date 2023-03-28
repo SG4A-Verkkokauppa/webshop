@@ -5,6 +5,12 @@ import Home from "./pages/Home"
 import Footer from './components/Footer';
 import React from "react";
 import {useState,useEffect} from 'react';
+import {Routes, Route} from 'react-router-dom';
+import Products from "./pages/Products";
+import Order from "./pages/Order";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+
 
 
 document.body.style.backgroundColor = "#1e2034";
@@ -58,7 +64,7 @@ function App(){
         <div className='container'>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/products/:catecoryId" element={<Products url={URL} addToCart={addToCart} />} />
+                <Route path="/products/:categoryId" element={<Products url={URL}addToCart={addToCart} />} />
                 <Route path="/order" element={<Order cart={cart} />} />
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />
