@@ -20,7 +20,14 @@ function App(){
    }, [])
 
    function addToCart(product) {
-    if (cart.some(item => item.id === product.id)) {
+    const newCart = [...cart,product];
+    setCart(newCart);
+    localStorage.setItem('cart',JSON.stringify(newCart));
+    
+    
+    
+    
+    /*if (cart.some(item => item.id === product.id)) {
       const existingProduct = cart.filter(item => item.id ===product.id);
       updateAmount(parseInt(existingProduct[0].amount) + 1,product);
     } else {
@@ -28,7 +35,7 @@ function App(){
       const newCart = [...cart,product];
       setCart(newCart);
       localStorage.setItem('cart',JSON.stringify(newCart));
-    }
+    }*/
   }
 
   function removeFromCart(product) {
@@ -48,8 +55,15 @@ function App(){
   return (
     <>
         <Navbar url={URL} cart={cart}/>
-
-              <Home />
+        <div className='container'>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/products/:catecoryId" element={<Products url={URL} addToCart={addToCart} />} />
+                <Route path="/order" element={<Order cart={cart} />} />
+                <Route path="/about" element={<About />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </div>
             
 <Footer/>
     </>
