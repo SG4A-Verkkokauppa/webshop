@@ -3,11 +3,6 @@ width: 600px;
 }
 
 
-.card-img-top{
-  background-color: #EAD444;
-}
-
-
 .navbar {
   height: 100px;
 }
@@ -23,7 +18,7 @@ width: 600px;
 }
 
 
-.cart{
+/*.cart{
   margin-left: 20px;
   background-color: transparent;
 }
@@ -44,7 +39,7 @@ width: 600px;
 
 .card-registration .select-arrow {
   top: 13px;
-}
+}*/
     
 
 .bg-grey {
@@ -62,9 +57,9 @@ width: 600px;
   height: auto;
 }
 
-.cartButton{
+/*.cartButton{
   align-items: end;
-}
+}*/
 
 .linkki{
   color: black;
@@ -73,6 +68,10 @@ width: 600px;
 .navbar-nav{
   margin-left: 15px;
 }
+
+
+
+
 
     @media (min-width: 992px) {
     .card-registration-2 .bg-grey {
