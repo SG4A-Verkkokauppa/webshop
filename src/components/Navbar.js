@@ -27,11 +27,10 @@ function BasicExample({url,cart}) {
   return (
     <Navbar bg="dark" variant='dark' fixed="top" className='navbar'>
       <Container>
-        <Navbar.Brand href="#home">Maagista.fi</Navbar.Brand>
+      <Link className="navbar-brand" to="/">Maagista.fi</Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Koti</Nav.Link>
             <Nav.Link href="#link">Linkki</Nav.Link>
             <NavDropdown title="Tuotteet" id="basic-nav-dropdown">
             {categories.map(category => (
