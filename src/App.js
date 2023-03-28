@@ -14,7 +14,7 @@ import NotFound from "./pages/NotFound";
 
 
 document.body.style.backgroundColor = "#1e2034";
-const URL ='http://localhost/Verkkokauppa/webshop-backend/';
+const URL ='http://localhost:3001/';
 
 function App(){
   const [cart, setCart] = useState([]);
@@ -64,7 +64,7 @@ function App(){
         <div className='container'>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/Tuotteet/:tuoteryhma_id" element={<Products url={URL}addToCart={addToCart} />} />
+                <Route path="products/:tuoteryhma_id" element={<Products url={URL} addToCart={addToCart} />} />
                 <Route path="/order" element={<Order cart={cart} />} />
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />
