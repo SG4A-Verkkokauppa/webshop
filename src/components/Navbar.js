@@ -27,7 +27,7 @@ function BasicExample({url,cart}) {
   return (
     <Navbar bg="dark" variant='dark' className='navbar'>
       <Container>
-      <Link className="navbar-brand" to="/">Maagista.fi</Link>
+      <Link className="navbar-brand otsikko" to="/">Maagista.fi</Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
