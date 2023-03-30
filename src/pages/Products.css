@@ -1,5 +1,11 @@
+
+/*
+Nämä tyylit tulee Allproducts.js (Kaikki tuotteet) koska siellä on vielä toistaseksi sama className products!
+*/
+
 .products{
-margin-top:100px;
+margin-top:50px;
+margin-bottom:30px;
 color:antiquewhite;
 }
 

@@ -42,8 +42,10 @@ function BasicExample({url,cart}) {
                   </NavDropdown.Item>
                 ))}
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Kaikki tuotteet
+              <NavDropdown.Item href="#">
+              {<Link className='linkki'
+                      to={'/allproducts/'}>Kaikki tuotteet
+                    </Link>}
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

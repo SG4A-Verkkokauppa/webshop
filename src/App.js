@@ -7,6 +7,8 @@ import React from "react";
 import {useState,useEffect} from 'react';
 import {Routes, Route} from 'react-router-dom';
 import Products from "./pages/Products";
+import Product from "./pages/Product";
+import Allproducts from "./pages/Allproducts";
 import Order from "./pages/Order";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
@@ -65,6 +67,8 @@ function App(){
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="products/:tuoteryhma_id" element={<Products url={URL} addToCart={addToCart} />} />
+                <Route path="/product/:tuotteen_id" element={<Product url={URL} />} />
+                <Route path="/allproducts/" element={<Allproducts url={URL} />} />
                 <Route path="/order" element={<Order cart={cart} />} />
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />
