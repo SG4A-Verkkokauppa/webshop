@@ -58,11 +58,11 @@ function BasicExample({url,cart}) {
                   <Button variant="outline-light" >Etsi</Button>
                   </Form>               
                   <ul className='navbar-nav ml-auto'>
-            <li className='nav-item'>
+
+          </ul>
+          <li className='ostoskori'>
               <Cart cart={cart} />
             </li>
-          </ul>
-
 
         </Navbar.Collapse>
         

@@ -69,7 +69,11 @@ width: 600px;
   margin-left: 15px;
 }
 
-
+.ostoskori {
+  background-color: aqua;
+  list-style: none;
+  font-size: 25px;
+}
 
 
 

@@ -10,7 +10,7 @@ import Products from "./pages/Products";
 import Order from "./pages/Order";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
-
+import Cart from "./components/Cart";
 
 
 document.body.style.backgroundColor = "#1e2034";

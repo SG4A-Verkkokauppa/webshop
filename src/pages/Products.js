@@ -31,7 +31,7 @@ export default function Products({url,addToCart}) {
     {products.map(product => (
       <div key={product.tuotteen_id}>
           {product.tuotteen_nimi}
-          <button className='btn btn-primary' type="button" onClick={e => addToCart(product)}>Add</button>
+          <button className='btn btn-primary' type="button" onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
       </div>
     ))}
     </div>
