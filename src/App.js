@@ -12,7 +12,7 @@ import Allproducts from "./pages/Allproducts";
 import Order from "./pages/Order";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
-import Cart from "./components/Cart";
+
 
 
 document.body.style.backgroundColor = "#1e2034";
@@ -28,12 +28,7 @@ function App(){
    }, [])
 
    function addToCart(product) {
-    const newCart = [...cart,product];
-    setCart(newCart);
-    localStorage.setItem('cart',JSON.stringify(newCart));
-    
-    
-    /*if (cart.some(item => item.id === product.id)) {
+    if (cart.some(item => item.id === product.id)) {
       const existingProduct = cart.filter(item => item.id ===product.id);
       updateAmount(parseInt(existingProduct[0].amount) + 1,product);
     } else {
@@ -41,7 +36,7 @@ function App(){
       const newCart = [...cart,product];
       setCart(newCart);
       localStorage.setItem('cart',JSON.stringify(newCart));
-    }*/
+    }
   }
 
   function removeFromCart(product) {
@@ -67,8 +62,7 @@ function App(){
                 <Route path="products/:tuoteryhma_id" element={<Products url={URL} addToCart={addToCart} />} />
                 <Route path="/product/:tuotteen_id" element={<Product url={URL} />} />
                 <Route path="/allproducts/" element={<Allproducts url={URL} />} />
-                <Route path="/order" element={<Order cart={cart} />} />
-                <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart}/>} />
+                <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}/>} />
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
