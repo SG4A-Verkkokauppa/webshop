@@ -7,6 +7,7 @@ import axios from 'axios';
 import React,{useState,useEffect} from 'react'; 
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
+import maaginenLogo from './images/maaginen-logo-pieni.png';
 
 
 function BasicExample({url,cart}) {
@@ -27,7 +28,7 @@ function BasicExample({url,cart}) {
   return (
     <Navbar bg="dark" variant='dark' className='navbar'>
       <Container>
-      <Link className="navbar-brand otsikko" to="/">Maagista.fi</Link>
+      <Link className="navbar-brand otsikko" to="/"><img src={maaginenLogo}></img></Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
