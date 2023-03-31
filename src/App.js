@@ -33,8 +33,6 @@ function App(){
     localStorage.setItem('cart',JSON.stringify(newCart));
     
     
-    
-    
     /*if (cart.some(item => item.id === product.id)) {
       const existingProduct = cart.filter(item => item.id ===product.id);
       updateAmount(parseInt(existingProduct[0].amount) + 1,product);
@@ -70,6 +68,7 @@ function App(){
                 <Route path="/product/:tuotteen_id" element={<Product url={URL} />} />
                 <Route path="/allproducts/" element={<Allproducts url={URL} />} />
                 <Route path="/order" element={<Order cart={cart} />} />
+                <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart}/>} />
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>

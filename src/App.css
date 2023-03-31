@@ -3,6 +3,8 @@
   font-family: 'Patrick Hand SC', cursive;
   font-size:30px !important;
 }
+
+
 .g-4{
 width: 600px;
 }
@@ -74,13 +76,28 @@ width: 600px;
   margin-left: 15px;
 }
 
+/*Ostoskori merkin tyylit*/
 .ostoskori {
-  background-color: aqua;
   list-style: none;
-  font-size: 25px;
+  font-size: 20px;
 }
 
+/*Ostoskorin sisällön koodit*/
+.header{
+  color: white;
+}
 
+.euro{
+  color: white;
+}
+
+.summa{
+  color: white;
+}
+
+:hover header{
+  color: pink;
+}
 
     @media (min-width: 992px) {
     .card-registration-2 .bg-grey {
