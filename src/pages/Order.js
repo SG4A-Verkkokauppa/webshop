@@ -32,19 +32,19 @@ export default function Order({cart, removeFromCart, updateAmount}) {
       <table classname="table">
         <tbody>
           {cart.map(product => {
-            sum+=parseFloat(product.price);
+            sum+=parseFloat(product.tuotteen_hinta);
             return (
-              <tr key={uuid()} className="euro">
-                <td>{product.name}</td>
-                <td>{product.price} €</td>
+              <tr className="euro" key={uuid()} >
+                <td>{product.tuotteen_nimi}</td>
+                <td>{product.hinta} €</td>
                 <td>
-                  <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} onChange={e => changeAmount(e,product,index)} />
+                  <input ref={inputs[index]} style={{width: '60px'}} value={product.hinta} onChange={e => changeAmount(e,product,index)} />
                 </td>
                 <td><a href='#' onClick={() => removeFromCart(product)}>Poista ostoskorista</a></td>
               </tr>
             )
           })}
-        <tr key={uuid()} className="summa">
+        <tr className="summa" key={uuid()} >
           <td></td>
           <td>{sum.toFixed(2)} €</td>
           <td></td>

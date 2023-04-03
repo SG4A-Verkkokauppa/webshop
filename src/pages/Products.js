@@ -12,7 +12,6 @@ export default function Products({url,addToCart}) {
   const [products, setProducts] = useState([])
 
   let params = useParams()
-  console.log(params.tuoteryhma_id);
   useEffect(() => {
     axios.get(url + 'products/products.php/' + params.tuoteryhma_id)
     .then((response)=>{

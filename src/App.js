@@ -28,26 +28,30 @@ function App(){
    }, [])
 
    function addToCart(product) {
-    if (cart.some(item => item.id === product.id)) {
-      const existingProduct = cart.filter(item => item.id ===product.id);
+    if (cart.some(item => item.tuotteen_id === product.tuotteen_id)) {
+      const existingProduct = cart.filter(item => item.tuotteen_id ===product.tuotteen_id);
       updateAmount(parseInt(existingProduct[0].amount) + 1,product);
     } else {
+    
       product['amount'] = 1;
       const newCart = [...cart,product];
       setCart(newCart);
       localStorage.setItem('cart',JSON.stringify(newCart));
+    
     }
   }
 
   function removeFromCart(product) {
-    const itemsWithoutRemoved = cart.filter(item => item.id !== product.id);
+    console.log(cart);
+    const itemsWithoutRemoved = cart.filter(item => item.tuotteen_id !== product.tuotteen_id);
     setCart(itemsWithoutRemoved);
     localStorage.setItem('cart',JSON.stringify(itemsWithoutRemoved));
+    console.log(itemsWithoutRemoved);
   }
 
   function updateAmount(amount,product) {
     product.amount = amount;
-    const index = cart.findIndex((item => item.id === product.id));
+    const index = cart.findIndex((item => item.tuotteen_id === product.tuotteen_id));
     const modifiedCart = Object.assign([...cart],{[index]: product});
     setCart(modifiedCart);
     localStorage.setItem('cart',JSON.stringify(modifiedCart));
@@ -65,6 +69,7 @@ function App(){
                 <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}/>} />
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />
+                <Route path="/Product" element={<Order cart={cart}/>} />
             </Routes>
         </div>
 
