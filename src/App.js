@@ -31,8 +31,8 @@ function App(){
     if (cart.some(item => item.tuotteen_id === product.tuotteen_id)) {
       const existingProduct = cart.filter(item => item.tuotteen_id ===product.tuotteen_id);
       updateAmount(parseInt(existingProduct[0].amount) + 1,product);
-    } else {
-    
+    } 
+    else {
       product['amount'] = 1;
       const newCart = [...cart,product];
       setCart(newCart);
@@ -42,11 +42,9 @@ function App(){
   }
 
   function removeFromCart(product) {
-    console.log(cart);
     const itemsWithoutRemoved = cart.filter(item => item.tuotteen_id !== product.tuotteen_id);
     setCart(itemsWithoutRemoved);
     localStorage.setItem('cart',JSON.stringify(itemsWithoutRemoved));
-    console.log(itemsWithoutRemoved);
   }
 
   function updateAmount(amount,product) {

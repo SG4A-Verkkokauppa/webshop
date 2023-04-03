@@ -33,7 +33,7 @@ export default function Product({url,addToCart}) {
     </div>
 
     
-  )
+  )}
 
 
 
@@ -43,7 +43,7 @@ export default function Product({url,addToCart}) {
  * 
  */
 
-
+/*
 function App() {
   const [cart, setCart] = useState([]);
 
@@ -72,4 +72,4 @@ return (
 )
 
 
-}}
+}}*/  
