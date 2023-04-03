@@ -22,7 +22,7 @@ export default function Product({url}) {
   return (
     <div className="product">
       <h3>{product?.tuotteen_nimi}</h3>
-      <div>kuva</div>
+      <div><img className='photo' src={url+'images/' + product?.kuva} alt="tuotekuva"/></div>
       <p>{product?.hinta}€</p>
       <p>{product?.tuotteen_kuvaus}</p>
     </div>
