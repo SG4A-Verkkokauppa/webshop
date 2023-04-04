@@ -20,6 +20,7 @@ const URL ='http://localhost:3001/';
 
 function App(){
   const [cart, setCart] = useState([]);
+  
 
   useEffect(() => {
     if ('cart' in localStorage) {
