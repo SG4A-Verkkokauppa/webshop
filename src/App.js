@@ -15,7 +15,7 @@ import NotFound from "./pages/NotFound";
 
 
 
-document.body.style.backgroundColor = "#1e2034";
+document.body.style.backgroundColor = "#FFFC51";
 const URL = 'http://localhost:3001/';
 
 function App(){
