@@ -20,6 +20,7 @@ const URL ='http://localhost:3001/';
 
 function App(){
   const [cart, setCart] = useState([]);
+  let sum= 0;
 
   useEffect(() => {
     if ('cart' in localStorage) {
@@ -34,7 +35,7 @@ function App(){
       
     } 
     else {
-      product['amount'] = 1
+      product['amount'] = 1;
       const newCart = [...cart,product];
       setCart(newCart);
       localStorage.setItem('cart',JSON.stringify(newCart));
