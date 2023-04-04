@@ -41,10 +41,7 @@ function App(updateAmount, changeAmount){
     }
   }
 
-  function changeAmount(e,product,index) {
-    updateAmount(e.target.value,product);
-    setInputIndex(index);
-  }
+
 
   function removeFromCart(product) {
     const itemsWithoutRemoved = cart.filter(item => item.tuotteen_id !== product.tuotteen_id);
