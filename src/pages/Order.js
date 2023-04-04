@@ -3,7 +3,6 @@ import uuid from 'react-uuid';
 import './Product.css'
 
 
-
 export default function Order({cart, removeFromCart, updateAmount, changeAmount}) {
   const [inputs,_] = useState([]);
   const [inputIndex, setInputIndex] = useState(-1);
@@ -37,7 +36,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
       <table classname='table'>
         <tbody>
           {cart.map(product => {
-            sum+=parseFloat(product.hinta);
+            sum+=parseFloat(product.amount * product.hinta);
             return (
               <tr className='euro' key={uuid()}>
                 <td>
