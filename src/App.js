@@ -73,8 +73,7 @@ function App(updateAmount, changeAmount){
                 <Route path="/Product" element={<Order cart={cart}/>} />
             </Routes>
         </div>
-
-<Footer/>
+        <Footer/>
     </>
 
   
