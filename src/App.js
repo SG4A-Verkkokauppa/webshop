@@ -18,9 +18,8 @@ import NotFound from "./pages/NotFound";
 document.body.style.backgroundColor = "#1e2034";
 const URL ='http://localhost:3001/';
 
-function App(){
+function App(updateAmount, changeAmount){
   const [cart, setCart] = useState([]);
-  
 
   useEffect(() => {
     if ('cart' in localStorage) {
@@ -32,14 +31,19 @@ function App(){
     if (cart.some(item => item.tuotteen_id === product.tuotteen_id)) {
       const existingProduct = cart.filter(item => item.tuotteen_id ===product.tuotteen_id);
       updateAmount(parseInt(existingProduct[0].amount) + 1,product);
+      
     } 
     else {
-      product['amount'] = 1;
+      product['amount'] = 1
       const newCart = [...cart,product];
       setCart(newCart);
       localStorage.setItem('cart',JSON.stringify(newCart));
-    
     }
+  }
+
+  function changeAmount(e,product,index) {
+    updateAmount(e.target.value,product);
+    setInputIndex(index);
   }
 
   function removeFromCart(product) {
