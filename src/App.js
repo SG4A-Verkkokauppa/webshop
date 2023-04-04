@@ -18,9 +18,15 @@ import NotFound from "./pages/NotFound";
 document.body.style.backgroundColor = "#1e2034";
 const URL = 'http://localhost:3001/';
 
+<<<<<<< HEAD
 function App() {
   const [cart, setCart] = useState([]);
 
+=======
+function App(){
+  const [cart, setCart] = useState([]);
+ 
+>>>>>>> 4bd94814ccf491084141b4d65a7706fe3c369843
 
   useEffect(() => {
     if ('cart' in localStorage) {
@@ -56,6 +62,7 @@ function App() {
     localStorage.setItem('cart', JSON.stringify(modifiedCart));
   }
 
+  
   return (
     <>
       <Navbar url={URL} cart={cart} />
