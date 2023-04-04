@@ -18,7 +18,7 @@ import NotFound from "./pages/NotFound";
 document.body.style.backgroundColor = "#1e2034";
 const URL ='http://localhost:3001/';
 
-function App(updateAmount, changeAmount){
+function App(){
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
