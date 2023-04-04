@@ -1,12 +1,13 @@
 import React, { useState, useEffect, index } from 'react'
 import uuid from 'react-uuid';
 import './Product.css'
-import axios from 'axios';
 
 
 export default function Order({cart, removeFromCart, updateAmount, changeAmount}) {
   const [inputs,_] = useState([]);
   const [inputIndex, setInputIndex] = useState(-1);
+
+  let sum = 0
   
 
   useEffect(() => {
@@ -17,10 +18,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
 
   useEffect(() => {
     if (
-      inputs.length > 0 &&
-      inputIndex > -1 &&
-      inputs[inputIndex].current !== null
-    ) {
+      inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
       inputs[inputIndex].current.focus()
     }
   }, [cart])
@@ -30,7 +28,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
     setInputIndex(index);
   }
 
-  let sum = 0
+
 
   return (
     <div>
@@ -45,7 +43,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
                   <img className='shoppingCart' src={product.kuva} alt='' />
                 </td>
                 <td>{product.tuotteen_nimi}</td>
-                <td>{product.hinta} €</td>
+                <td>{product.amount * product.hinta} €</td>
                 <td>
                   <input
                     type='number'
@@ -70,9 +68,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
             <td></td>
             <td></td>
             <td>{sum.toFixed(2)} €</td>
-            <td><a href='#' onClick={() => updateAmount()}>
-                    Päivitä ostokori
-                  </a></td>
+            <td></td>
           </tr>
         </tbody>
       </table>
