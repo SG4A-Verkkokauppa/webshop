@@ -20,7 +20,6 @@ const URL ='http://localhost:3001/';
 
 function App(updateAmount, changeAmount){
   const [cart, setCart] = useState([]);
-  const [inputIndex, setInputIndex] = useState(-1);
 
   useEffect(() => {
     if ('cart' in localStorage) {
