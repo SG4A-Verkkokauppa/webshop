@@ -20,7 +20,7 @@ const URL ='http://localhost:3001/';
 
 function App(){
   const [cart, setCart] = useState([]);
-  let sum= 0;
+ 
 
   useEffect(() => {
     if ('cart' in localStorage) {
@@ -58,6 +58,7 @@ function App(){
     localStorage.setItem('cart',JSON.stringify(modifiedCart));
   }
 
+  
   return (
     <>
         <Navbar url={URL} cart={cart}/>
