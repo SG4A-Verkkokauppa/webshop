@@ -2,8 +2,9 @@ import React, { useState, useEffect, index } from 'react'
 import uuid from 'react-uuid';
 import './Product.css'
 
+const URL = 'http://localhost:3001/';
 
-export default function Order({cart, removeFromCart, updateAmount, changeAmount}) {
+export default function Order({cart, removeFromCart, updateAmount, changeAmount, url}) {
   const [inputs,_] = useState([]);
   const [inputIndex, setInputIndex] = useState(-1);
 
@@ -36,11 +37,12 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
       <table classname='table'>
         <tbody>
           {cart.map(product => {
+            console.log(product.kuva);
             sum+=parseFloat(product.amount * product.hinta);
             return (
               <tr className='euro' key={uuid()}>
                 <td>
-                  <img className='shoppingCart' src={product.kuva} alt='' />
+                  <img className='shoppingCart' src={URL+'images/' + product.kuva} alt='' />
                 </td>
                 <td>{product.tuotteen_nimi}</td>
                 <td>{product.amount * product.hinta} €</td>
