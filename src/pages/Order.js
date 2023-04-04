@@ -1,6 +1,7 @@
 import React, { useState, useEffect, index } from 'react'
 import uuid from 'react-uuid';
 import './Product.css'
+import axios from 'axios';
 
 
 export default function Order({cart, removeFromCart, updateAmount, changeAmount, url}) {
@@ -59,6 +60,9 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount,
                     Poista ostoskorista
                   </a>
                 </td>
+                <td>
+                  
+                </td>
               </tr>
             )
           })}
@@ -66,7 +70,9 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount,
             <td></td>
             <td></td>
             <td>{sum.toFixed(2)} €</td>
-            <td></td>
+            <td><a href='#' onClick={() => updateAmount()}>
+                    Päivitä ostokori
+                  </a></td>
           </tr>
         </tbody>
       </table>
