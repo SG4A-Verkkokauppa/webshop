@@ -1,54 +1,77 @@
 import React, { useState, useEffect, index } from 'react'
 import uuid from 'react-uuid';
+import './Product.css'
 
+const URL = 'http://localhost:3001/';
 
-
-
-export default function Order({cart, removeFromCart, updateAmount}) {
+export default function Order({cart, removeFromCart, updateAmount, changeAmount, url}) {
   const [inputs,_] = useState([]);
-  const[inputIndex, setInputIndex] = useState(-1);
-  let sum = 0;
+  const [inputIndex, setInputIndex] = useState(-1);
+
+  let sum = 0
+  
 
   useEffect(() => {
-    for (let i = 0;i < cart.length;i++) {
-      inputs[i] = React.createRef();
+    for (let i = 0; i < cart.length; i++) {
+      inputs[i] = React.createRef()
     }
   }, [cart.length])
 
-  useEffect(()=> {
-    if (inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
-      inputs[inputIndex].current.focus();
+  useEffect(() => {
+    if (
+      inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
+      inputs[inputIndex].current.focus()
     }
-  },[cart])
+  }, [cart])
 
   function changeAmount(e,product,index) {
-    updateAmount(e.target.value.product);
+    updateAmount(e.target.value,product);
     setInputIndex(index);
   }
 
+
+
   return (
     <div>
-      <h3 className="header">Ostoskorin sisältö</h3>
-      <table classname="table">
+      <h3 className='header'>ostoskorin sisältö</h3>
+      <table classname='table'>
         <tbody>
           {cart.map(product => {
-            sum+=parseFloat(product.price);
+            console.log(product.kuva);
+            sum+=parseFloat(product.amount * product.hinta);
             return (
-              <tr key={uuid()} className="euro">
-                <td>{product.name}</td>
-                <td>{product.price} €</td>
+              <tr className='euro' key={uuid()}>
                 <td>
-                  <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} onChange={e => changeAmount(e,product,index)} />
+                  <img className='shoppingCart' src={URL+'images/' + product.kuva} alt='' />
                 </td>
-                <td><a href='#' onClick={() => removeFromCart(product)}>Poista ostoskorista</a></td>
+                <td>{product.tuotteen_nimi}</td>
+                <td>{product.amount * product.hinta} €</td>
+                <td>
+                  <input
+                    type='number'
+                    ref={inputs[index]}
+                    style={{ width: '60px' }}
+                    value={product.amount}
+                    onChange={e => changeAmount(e, product, index)}
+                  />
+                </td>
+                <td>
+                  <a href='#' onClick={() => removeFromCart(product)}>
+                    Poista ostoskorista
+                  </a>
+                </td>
+                <td>
+                  
+                </td>
               </tr>
             )
           })}
-        <tr key={uuid()} className="summa">
-          <td></td>
-          <td>{sum.toFixed(2)} €</td>
-          <td></td>
-        </tr>
+          <tr className='summa' key={uuid()}>
+            <td></td>
+            <td></td>
+            <td>{sum.toFixed(2)} €</td>
+            <td></td>
+          </tr>
         </tbody>
       </table>
     </div>

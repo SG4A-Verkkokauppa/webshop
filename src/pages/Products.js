@@ -8,11 +8,10 @@ import {Link, useParams} from 'react-router-dom'
 
 
 export default function Products({url,addToCart}) {
-  const [categoryName, setCategoryName] = useState('')
-  const [products, setProducts] = useState([])
+  const [categoryName, setCategoryName] = useState('');
+  const [products, setProducts] = useState([]);
 
   let params = useParams()
-  console.log(params.tuoteryhma_id);
   useEffect(() => {
     axios.get(url + 'products/products.php/' + params.tuoteryhma_id)
     .then((response)=>{
@@ -26,7 +25,7 @@ export default function Products({url,addToCart}) {
   
   return (
     <div className='products'>
-    <h3>{categoryName}</h3>
+    <h3>Products for {categoryName}</h3>
     {products.map(product => (
       <div key={product.tuotteen_id}>
          {<Link 

@@ -64,9 +64,6 @@ width: 600px;
   height: auto;
 }
 
-/*.cartButton{
-  align-items: end;
-}*/
 
 .linkki{
   color: black;
@@ -81,6 +78,7 @@ width: 600px;
   list-style: none;
   font-size: 20px;
 }
+
 
 /*Ostoskorin sisällön koodit*/
 .header{

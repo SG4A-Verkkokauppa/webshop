@@ -22,9 +22,14 @@ h3{
 
 .photo{
     
-        width: 200px;
+        width: 150px;
         height: 150px;
       }
+
+.shoppingCart{
+    width: 100px;
+    height: 100px;
+}
       
 
 
