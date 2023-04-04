@@ -4,7 +4,7 @@ import uuid from 'react-uuid';
 
 
 
-export default function Order({cart, removeFromCart, updateAmount}) {
+export default function Order({cart, removeFromCart, updateAmount, changeAmount, url}) {
   const [inputs,_] = useState([]);
   const [inputIndex, setInputIndex] = useState(-1);
   
@@ -21,10 +21,7 @@ export default function Order({cart, removeFromCart, updateAmount}) {
     }
   },[cart])
 
-  function changeAmount(e,product,index) {
-    updateAmount(e.target.value.product);
-    setInputIndex(index);
-  }
+
 
   let sum = 0;
 
@@ -33,12 +30,13 @@ export default function Order({cart, removeFromCart, updateAmount}) {
       <h3 className="header">Ostoskorin sisältö</h3>
       <table classname="table">
         <tbody>
-          {cart.map(product => {
+          {cart.map((product,index) => {
             sum+=parseFloat(product.hinta);
             return (
               <tr className="euro" key={uuid()} >
                 <td>{product.tuotteen_nimi}</td>
                 <td>{product.hinta} €</td>
+                <img src={url+'images/' + product.kuva} alt="tuotekuva"/>
                 <td>
                   <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} onChange={e => changeAmount(e,product,index)} />
                 </td>
