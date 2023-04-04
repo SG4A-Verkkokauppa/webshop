@@ -3,7 +3,7 @@ import uuid from 'react-uuid';
 import './Product.css'
 
 
-export default function Order({cart, removeFromCart, updateAmount, changeAmount, url}) {
+export default function Order({cart, removeFromCart, updateAmount, changeAmount}) {
   const [inputs,_] = useState([]);
   const [inputIndex, setInputIndex] = useState(-1);
   
@@ -25,7 +25,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount,
   }, [cart])
 
   function changeAmount(e,product,index) {
-    updateAmount(e.target.value.product);
+    updateAmount(e.target.value,product);
     setInputIndex(index);
   }
 
