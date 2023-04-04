@@ -54,3 +54,4 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount,
     </div>
   )
 }
+//Muutenvaan
