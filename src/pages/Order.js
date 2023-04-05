@@ -43,7 +43,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
                   <img className='shoppingCart' src={product.kuva} alt='' />
                 </td>
                 <td>{product.tuotteen_nimi}</td>
-                <td>{product.amount * product.hinta} €</td>
+                <td>{(product.amount * product.hinta).toFixed(2)} €</td>
                 <td>
                   <input
                     type='number'
