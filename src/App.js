@@ -16,7 +16,7 @@ import Cart from "./components/Cart";
 
 
 
-document.body.style.backgroundColor = "#10296D";
+document.body.style.backgroundColor = "#000000";
 const URL = 'http://localhost:3001/';
 
 function App(){

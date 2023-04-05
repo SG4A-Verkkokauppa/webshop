@@ -4,10 +4,10 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const data = [
   {
-   image: require('./images/testi.jpg'), 
+   image: require('./images/1mainos.png'), 
   },
   {
-    image:require('./images/testi2.jpg'), 
+    image:require('./images/kultamuki.png'), 
    }
 ]
 
