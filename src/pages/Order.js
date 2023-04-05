@@ -1,7 +1,7 @@
 import React, { useState, useEffect, index } from 'react'
 import uuid from 'react-uuid';
 import './Product.css'
-
+import Cart from '../components/Cart';
 
 export default function Order({cart, removeFromCart, updateAmount, changeAmount}) {
   const [inputs,_] = useState([]);
@@ -46,7 +46,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
                 <td>{(product.amount * product.hinta).toFixed(2)} €</td>
                 <td>
                   <input
-                    type='number'
+                    type='number' min={0}
                     ref={inputs[index]}
                     style={{ width: '60px' }}
                     value={product.amount}

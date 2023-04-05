@@ -12,6 +12,7 @@ import Allproducts from "./pages/Allproducts";
 import Order from "./pages/Order";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import Cart from "./components/Cart";
 
 
 
@@ -35,7 +36,7 @@ function App(){
 
     }
     else {
-      product['amount'] = 1;
+      product['amount'] = 1
       const newCart = [...cart, product];
       setCart(newCart);
       localStorage.setItem('cart', JSON.stringify(newCart));
