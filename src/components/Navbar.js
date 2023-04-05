@@ -7,7 +7,7 @@ import axios from 'axios';
 import React,{useState,useEffect} from 'react'; 
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
-import maaginenLogo from './images/maaginen-logo-pieni.png';
+import maaginenLogo from './images/maaginen-logo-v2.png';
 
 
 function BasicExample({url,cart}) {
