@@ -7,7 +7,7 @@ const data = [
    image: require('./images/1mainos.png'), 
   },
   {
-    image:require('./images/kultamuki.png'), 
+    image:require('./images/1kultamuki.png'), 
    }
 ]
 
