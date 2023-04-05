@@ -82,19 +82,21 @@ width: 600px;
 /*Ostoskorin sisällön koodit*/
 .header{
   color: white;
+
 }
 
 .euro{
   color: white;
+  height: 50px;
+
 }
 
 .summa{
   color: white;
+  height: 50px;
+  
 }
 
-:hover header{
-  color: pink;
-}
 
     @media (min-width: 992px) {
     .card-registration-2 .bg-grey {

@@ -8,6 +8,12 @@ const data = [
   },
   {
     image:require('./images/1kultamuki.png'), 
+   },
+   {
+    image:require('./images/2mainos.png'), 
+   },
+   {
+    image:require('./images/3mainos.png'), 
    }
 ]
 
