@@ -3,6 +3,8 @@ import uuid from 'react-uuid';
 import './Product.css'
 import Cart from '../components/Cart';
 
+const URL = 'http://localhost:3001/';
+
 export default function Order({cart, removeFromCart, updateAmount, changeAmount}) {
   const [inputs,_] = useState([]);
   const [inputIndex, setInputIndex] = useState(-1);
@@ -40,7 +42,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
             return (
               <tr className='euro' key={uuid()}>
                 <td>
-                  <img className='shoppingCart' src={product.kuva} alt='' />
+                <img className='shoppincartImages' src={URL+'images/' + product?.kuva} alt="tuotekuva"/>
                 </td>
                 <td>{product.tuotteen_nimi}</td>
                 <td>{(product.amount * product.hinta).toFixed(2)} €</td>

@@ -88,7 +88,8 @@ width: 600px;
 .euro{
   color: white;
   height: 50px;
-
+  border-bottom: 1.5px solid white;
+  height: 125px;
 }
 
 .summa{
