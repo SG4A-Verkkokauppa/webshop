@@ -5,17 +5,14 @@ import './Product.css'
 
 export default function Product({url,addToCart}) {
   const [product, setProduct] = useState(null);
-  const [categoryName,setCategoryName] = useState([]);
 
 
   let params = useParams();
   
   useEffect(() => {
-    axios.get(url + 'products/products.php/' + params.tuotteen_id)
+    axios.get(url + 'products/product.php/' + params.tuotteen_id)
       .then((response) => {
-        const json = response.data;
-        setCategoryName(json.category);
-        setProduct(json.products);
+        setProduct(response.data);
       }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error);
       })
@@ -23,7 +20,7 @@ export default function Product({url,addToCart}) {
   
   return (
     <div className="product">
-      <h3>{product?.tuotteen_nimi}{categoryName}</h3>
+      <h3>{product?.tuotteen_nimi}</h3>
       <div><img className='photo' src={url+'images/' + product?.kuva} alt="tuotekuva"/></div>
       <p>{product?.hinta}€</p>
       <p>{product?.tuotteen_kuvaus}</p>
