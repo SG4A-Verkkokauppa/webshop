@@ -9,6 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 import Products from "./pages/Products";
 import Product from "./pages/Product";
 import Allproducts from "./pages/Allproducts";
+import Manage from "./pages/Manage";
 import Order from "./pages/Order";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
@@ -71,6 +72,7 @@ function App(){
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/Product" element={<Order cart={cart} />} />
+          <Route path="/Manage" element={<Manage/>} />
         </Routes>
       </div>
       <Footer />

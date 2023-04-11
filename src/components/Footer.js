@@ -22,7 +22,9 @@ export default function Footer() {
             <tr>
                 <td>123456 Meemilä</td>
                 <td>p. 000 3456789</td>
-                <td><a href=''> Yritys</a></td>
+                <td>{<Link
+                      to={'/Manage'}>Ylläpito
+                    </Link>}</td>
             </tr>
             <tr>
                <td></td>
