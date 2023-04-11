@@ -25,7 +25,7 @@ export default function Products({url,addToCart}) {
   
   return (
     <div className='products'>
-    <h3>Products for {categoryName}</h3>
+    <h3>{categoryName}</h3>
     {products.map(product => (
       <div key={product.tuotteen_id}>
          {<Link 
