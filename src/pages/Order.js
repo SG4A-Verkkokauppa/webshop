@@ -34,9 +34,15 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
 
   return (
     <div>
-      <h3 className='header'>ostoskorin sisältö</h3>
+
       <table classname='table'>
         <tbody>
+          <tr>
+            <td><h3 className='header'>ostoskorin sisältö</h3></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
           {cart.map(product => {
             sum+=parseFloat(product.amount * product.hinta);
             return (
