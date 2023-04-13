@@ -26,7 +26,7 @@ function BasicExample({url,cart}) {
 
 
   return (
-    <Navbar bg="dark" variant='dark' className='navbar'>
+    <Navbar className='navbar'>
       <Container>
       <Link className="navbar-brand otsikko" to="/"><img src={maaginenLogo}></img></Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

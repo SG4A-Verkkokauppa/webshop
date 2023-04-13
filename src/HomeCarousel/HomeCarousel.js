@@ -14,6 +14,9 @@ const data = [
    },
    {
     image:require('./images/3mainos.png'), 
+   },
+   {
+    image:require('./images/4mainos.png'), 
    }
 ]
 
