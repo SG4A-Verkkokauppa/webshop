@@ -45,9 +45,14 @@ width: 600px;
   height: auto;
 }
 
+/*Dropdown menun tyylit*/
+.nav-item .dropdown-menu {
+  background-color: #1e2034;
+  outline: 1px solid #f5f5f5;
+}
 
 .linkki{
-  color: black;
+  color: #f5f5f5;
 }
 
 .navbar-nav{
