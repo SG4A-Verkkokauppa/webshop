@@ -72,21 +72,21 @@ width: 600px;
 
 /*Ostoskorin sisällön koodit*/
 .header{
-  color: white;
+  color: #f5f5f5;
+  padding-bottom: 10px;
 
 }
 
 .euro{
-  color: white;
+  color: #f5f5f5;
   height: 50px;
-  border-bottom: 1.5px solid white;
+  border-bottom: 1.5px solid #f5f5f5;
   height: 125px;
 }
 
 .summa{
-  color: white;
+  color: #f5f5f5;
   height: 50px;
-  
 }
 
 
