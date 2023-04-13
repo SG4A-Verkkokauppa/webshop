@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import './Product.css'
+import '../Styles/Product.css'
 
 export default function Product({url,addToCart}) {
   const [product, setProduct] = useState(null);

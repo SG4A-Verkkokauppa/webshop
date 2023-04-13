@@ -1,6 +1,6 @@
 import React, { useState, useEffect, index } from 'react'
 import uuid from 'react-uuid';
-import './Product.css'
+import '../Styles/Product.css'
 import Cart from '../components/Cart';
 
 const URL = 'http://localhost:3001/';
