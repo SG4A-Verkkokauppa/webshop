@@ -11,8 +11,8 @@ width: 600px;
 
 .navbar {
   height: 100px;
-  background-color: #1e2034;
-  border-bottom: 1px solid #f5f5f5;
+  background-color: #141623;
+
 }
 
 
@@ -48,7 +48,6 @@ width: 600px;
 /*Dropdown menun tyylit*/
 .nav-item .dropdown-menu {
   background-color: #1e2034;
-  outline: 1px solid #f5f5f5;
 }
 
 .linkki{
