@@ -54,6 +54,11 @@ width: 600px;
   color: #141623;
 }
 
+.dropdown-menu a:hover {
+  color: #f5f5f5;
+  background-color :#1e2034;
+}
+
 .navbar-nav{
   margin-left: 15px;
 }
