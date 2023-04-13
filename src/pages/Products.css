@@ -5,9 +5,17 @@ Nämä tyylit tulee Allproducts.js (Kaikki tuotteet) koska siellä on vielä toi
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
 
 .products{
-margin-top:50px;
+display:flex;
+margin-top:20px;
 margin-bottom:30px;
 color:antiquewhite;
+justify-content: center;
+
+}
+.otsikko{
+    margin-top:20px;
+    display:block;
+    color:antiquewhite;
 }
 
 .products button{
@@ -19,7 +27,15 @@ color:antiquewhite;
 h3{
     font-family: 'Patrick Hand SC', cursive;
 }
-
+.tuotekuva{
+    padding:15px;
+    margin:auto;
+}
+.tuotenimi{
+    display:inline-block;
+    margin-left:15px;
+    padding:10px;
+}
 .photo{
     
         width: 150px;
@@ -34,6 +50,9 @@ h3{
     width: 100px;
     height: 100px;
 }
-      
-
+.testi{
+    border: 1px solid white;
+    margin:auto;
+    padding:10px;
+}
 
