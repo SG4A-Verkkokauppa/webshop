@@ -6,15 +6,17 @@ import CategoryLists from '../components/CategoryLists';
 
 
 
-export default function Manage({url}) {
+export default function Manage() {
     const [newCategory, setNewCategory] = useState("")
     const [selectedCategory,setSelectedCategory ] = useState(null)
     const [addingCategory, setAddingCategory] = useState(false)
+    // Muista päivittää tämä url jos backend muuttuu!
+    const URL = 'http://localhost:3001/';
 
     function saveCategory(e) {
         e.preventDefault();
         const json = JSON.stringify({name: newCategory});
-        axios.post(url + 'products/addcategory.php',json,{
+        axios.post(URL + 'products/addcategory.php',json,{
             headers: {
                 'Content-Type' : 'application/json'
             }
@@ -35,7 +37,7 @@ export default function Manage({url}) {
             <div>
                 <label>Tuoteryhmät</label>
                 <CategoryLists
-                url={url}
+                url={URL}
                 selectedCategory={selectedCategory}
                 setSelectedCategory={setSelectedCategory}
                 />
