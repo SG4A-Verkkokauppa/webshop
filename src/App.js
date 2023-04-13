@@ -17,7 +17,7 @@ import Cart from "./components/Cart";
 
 
 
-document.body.style.backgroundColor = "#000000";
+document.body.style.backgroundColor = "#1e2034";
 // Backendin osoite! Päivitä jos muuttuu!
 const URL = 'http://localhost:3001/';
 
