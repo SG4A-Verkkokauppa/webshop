@@ -63,10 +63,11 @@ width: 600px;
   margin-left: 15px;
 }
 
-/*Ostoskori merkin tyylit*/
+/*Ostoskori kuvakkeen tyylit*/
 .ostoskori {
   list-style: none;
-  font-size: 20px;
+  font-size: 30px;
+  align-items: baseline;
 }
 
 
