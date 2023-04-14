@@ -3,6 +3,7 @@ import React from 'react'
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 import {Link, useParams} from 'react-router-dom'
+import { Row, Col, Container } from "react-bootstrap";
 
 // Tuotteiden näyttäminen tuoteryhmän mukaan:
 
@@ -23,21 +24,25 @@ export default function Products({url,addToCart}) {
   }, [])
   
   return (
+    <div>
+      <div className='otsikko'><h3>kaikki tuotteet</h3></div>
     <div className='products'>
-    <h3>Kaikki tuotteet</h3>
     {products.map(product => (
-      <div key={product.tuotteen_id}>
+      <div className='tuotekortti' key={product.tuotteen_id}>
+          <div className='tuotekuva'><img className='photo' src={url+'images/' + product.kuva} alt="tuotekuva"/></div>
          {<Link 
             to={'/product/' + product.tuotteen_id}>
-              <>
+              <div className='tuotenimi'>
                  {product.tuotteen_nimi}
-              </>
+                 </div>
           </Link> }
-          <>  {product.hinta}€ </>
-          <div><img className='photo' src={url+'images/' + product.kuva} alt="tuotekuva"/></div>
+          <div className='tuotehinta'>  {product.hinta}€ </div>
+        
          <div> <button className='btn btn-primary' type="button" onClick={e => addToCart(product)}>Lisää ostoskoriin</button> </div>
       </div>
     ))}
     </div>
+    </div>
+
   )
 }
