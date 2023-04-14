@@ -24,6 +24,7 @@ export default function Products({url,addToCart}) {
   }, [])
   
   return (
+    <Container fluid>
     <div>
       <div className='otsikko'><h3>kaikki tuotteet</h3></div>
     <div className='products'>
@@ -43,6 +44,7 @@ export default function Products({url,addToCart}) {
     ))}
     </div>
     </div>
+    </Container>
 
   )
 }

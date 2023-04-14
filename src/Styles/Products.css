@@ -13,14 +13,12 @@ flex-wrap: nowrap;
 } */
 
 .products{
-display: grid;
-grid-auto-flow: row dense;
-grid-template-columns: fit-content(200px) fit-content(200px) fit-content(200px) fit-content(200px) 4fr;
+display: inline-grid;
+grid-template-columns: auto auto auto auto;
+grid-auto-rows: max-content;
 /* display:flex; */
 grid-gap: 20px;
 color:black;
-justify-content: center;
-
 }
 
 .otsikko{
