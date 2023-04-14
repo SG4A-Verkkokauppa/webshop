@@ -1,7 +1,8 @@
+import '../Styles/Product.css'
 import React,{useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import '../Styles/Product.css'
+
 
 export default function Product({url,addToCart}) {
   const [product, setProduct] = useState(null);
@@ -20,11 +21,10 @@ export default function Product({url,addToCart}) {
   
   return (
     <div className="product">
-      <h3>{product?.tuotteen_nimi}</h3>
-      <div><img className='photo' src={url+'images/' + product?.kuva} alt="tuotekuva"/></div>
-      <p>{product?.hinta}€</p>
-      <p>{product?.tuotteen_kuvaus}</p>
-
+      <div className='otsikko'><h3>{product?.tuotteen_nimi}</h3></div>
+      <div><img className='product-photo' src={url+'images/' + product?.kuva} alt="tuotekuva"/></div>
+      <div className='tuotesivukuvaus'>{product?.tuotteen_kuvaus}</div>
+      <div className='tuotesivuhinta'>{product?.hinta} €</div>
 
       <button className='btn btn-primary' type="button" onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
     </div>

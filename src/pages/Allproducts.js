@@ -24,11 +24,10 @@ export default function Products({url,addToCart}) {
   }, [])
   
   return (
-    <Container fluid>
     <div>
       <div className='otsikko'><h3>kaikki tuotteet</h3></div>
-    <div className='products'>
-    {products.map(product => (
+      <div className='products'>
+      {products.map(product => (
       <div className='tuotekortti' key={product.tuotteen_id}>
           <div className='tuotekuva'><img className='photo' src={url+'images/' + product.kuva} alt="tuotekuva"/></div>
          {<Link 
@@ -44,7 +43,6 @@ export default function Products({url,addToCart}) {
     ))}
     </div>
     </div>
-    </Container>
 
   )
 }

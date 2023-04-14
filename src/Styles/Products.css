@@ -15,7 +15,8 @@ flex-wrap: nowrap;
 .products{
 display: inline-grid;
 grid-template-columns: auto auto auto auto;
-grid-auto-rows: max-content;
+grid-auto-flow: column;
+grid-auto-flow: row;
 /* display:flex; */
 grid-gap: 20px;
 color:black;
