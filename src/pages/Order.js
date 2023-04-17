@@ -35,7 +35,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
   return (
     <div>
 
-      <table classname='table'>
+      <table className='table'>
         <tbody>
           <tr>
             <td><h3 className='header'>ostoskorin sisältö</h3></td>
