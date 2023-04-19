@@ -66,6 +66,8 @@ h3{
 .shoppincartImages{
     width: 100px;
     height: 100px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
 }
 .tuotekortti{
     margin:auto;

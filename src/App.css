@@ -66,8 +66,14 @@ width: 600px;
 /*Ostoskori kuvakkeen tyylit*/
 .ostoskori {
   list-style: none;
-  font-size: 30px;
+  font-size: 24px;
   align-items: baseline;
+  color: #FFFF05!important;
+  margin-bottom: 9px;
+}
+
+.lkm{
+  margin: 10px;
 }
 
 
@@ -77,15 +83,15 @@ width: 600px;
   padding-bottom: 10px;
 }
 
-.table{
+/*Reima koitti saada säädettyä footeria, mutta tarttis muokata koko bodya*/
+/*.table{
   min-height: 100%;
   margin-bottom: -150px;
-}
+}*/
 
 .euro{
   color: #f5f5f5;
   height: 50px;
-  border-bottom: 1.5px solid #f5f5f5;
   height: 125px;
 }
 
