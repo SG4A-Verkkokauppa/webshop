@@ -37,6 +37,7 @@ color:black;
     padding:5px;
     border: none;
 }
+
 h3{
     font-family: 'Patrick Hand SC', cursive;
 }
@@ -76,6 +77,8 @@ h3{
     border-radius: 5px;
    ;
 }
+
+
 
 /* .testi a:hover{
     background-color: #ffed00;

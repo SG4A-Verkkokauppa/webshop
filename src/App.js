@@ -13,7 +13,7 @@ import Manage from "./pages/Manage";
 import Order from "./pages/Order";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
-import Cart from "./components/Cart";
+
 
 
 
@@ -32,6 +32,7 @@ function App(){
   }, [])
 
   function addToCart(product) {
+    
     if (cart.some(item => item.tuotteen_id === product.tuotteen_id)) {
       const existingProduct = cart.filter(item => item.tuotteen_id === product.tuotteen_id);
       updateAmount(parseInt(existingProduct[0].amount) + 1, product);
