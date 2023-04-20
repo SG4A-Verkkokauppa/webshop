@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import CategoryLists from '../components/CategoryLists';
+import '../Styles/Manage.css'
   
 
 
@@ -32,30 +33,32 @@ export default function Manage() {
 
     if (!addingCategory) {
         return (
-            <>
-            <h3>Tuoteryhmien ylläpito</h3>
+            <div className="manage">
+            <h3 id="add">Tuoteryhmien ylläpito</h3>
             <div>
-                <label>Tuoteryhmät</label>
+                <label>Tuoteryhmät:</label>
                 <CategoryLists
                 url={URL}
                 selectedCategory={selectedCategory}
                 setSelectedCategory={setSelectedCategory}
                 />
-                <button className="btn btn-dark" type="button" onClick={()=> setAddingCategory(true)}>Add</button>
+                <button className="btn btn-primary mb" type="button" onClick={()=> setAddingCategory(true)}>Lisää</button>
             </div>
-        </>
+        </div>
         )
     } else {
         return (
-            <div className="jeesus">
-            <h3>Lisää uusi tuoteryhmä</h3>
+            <div className="manage">
+            <h3 id="safe">Lisää uusi tuoteryhmä</h3>
             <form onSubmit={saveCategory}>
                 <div>
-                    <label>Tuoteryhmän nimi</label>
+                    <label>Tuoteryhmän nimi:</label>
                     <input type="text" value={newCategory} onChange={(e) => setNewCategory(e.target.value)}></input>
                 </div>
-                <button type="button" onClick={() => setAddingCategory(false)}>Peruuta</button>
-                <button type="submit">Tallenna</button>
+                <div className='buttons'>
+                <button type="button" className="btn btn-primary"   onClick={() => setAddingCategory(false)}>Peruuta</button>
+                <button type="submit" className='buttontwo btn btn-primary'>Tallenna</button>
+                </div>
             </form>
             </div>
         )

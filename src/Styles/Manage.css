@@ -1,0 +1,32 @@
+.manage{
+    color: #f5f5f5;
+    margin-top: 80px;
+}
+
+label{
+    padding: 20px;
+
+}
+
+.mb{
+    margin: 20px;
+
+}
+
+#add{
+    margin-left: 90px;
+    margin-bottom: 40px ;
+}
+
+#safe{
+    margin-left: 150px;
+    margin-bottom: 40px ;
+}
+
+.buttons{
+    margin-left: 175px;
+}
+
+.buttontwo{
+    margin-left: 15px;
+}

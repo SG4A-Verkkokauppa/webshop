@@ -1,6 +1,6 @@
 import React, { useState, useEffect, index } from 'react'
 import uuid from 'react-uuid';
-import '../Styles/Product.css'
+import "../App.css";
 import Cart from '../components/Cart';
 import axios from 'axios';
 
@@ -18,11 +18,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
   const [finished, setFinished] = useState("")
   const [empty, setEmpty] = useState("")
 
-
   let sum = 0
-
-  
-  
 
   useEffect(() => {
     for (let i = 0; i < cart.length; i++) {
@@ -66,11 +62,10 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
       alert(error.response === undefined ? error : error.response.data.error);
     });}
 
-
   return (
     <div>
 
-      <table className='table'>
+      <table className='OKtable'>
         <tbody>
           <tr>
             <td><h3 className='header'>ostoskorin sisältö</h3></td>
