@@ -133,8 +133,12 @@ padding-top: 30px;
     color: black;
     margin-top:5px;
     padding:5px;
-    border: none;
-  
+    border: none; 
+}
+
+.button:hover{
+  background-color: #1e2034;
+  color: #ffda05;
 }
 
     @media (min-width: 992px) {
