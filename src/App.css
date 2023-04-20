@@ -127,11 +127,10 @@ padding-top: 30px;
 }
 
 .button{
-  margin-top: 20px;
+  margin-top: 50px;
   background-color: #ffda05;
     width: 140px;
     color: black;
-    margin-top:5px;
     padding:5px;
     border: none; 
 }
@@ -139,6 +138,12 @@ padding-top: 30px;
 .button:hover{
   background-color: #1e2034;
   color: #ffda05;
+}
+
+.tilaus{
+  margin-top: 60px;
+  padding: 30px;
+  border: 2px solid #1e2034;
 }
 
     @media (min-width: 992px) {

@@ -111,6 +111,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
         </tbody>
       </table>
       {cart.length > 0 &&
+    <div className='tilaus'>  
     <>
     <h3 className="header">Tilauslomake</h3>  <form onSubmit={order}>
     <div className='form-group'>
@@ -139,6 +140,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
     </div>
     </form>
     </>
+    </div>
     
 }
     </div>
