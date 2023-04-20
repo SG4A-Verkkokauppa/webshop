@@ -92,6 +92,7 @@ width: 600px;
 .euro{
   color: #f5f5f5;
   height: 50px;
+  border-bottom: 1.5px solid white;
   height: 125px;
 }
 
@@ -99,6 +100,16 @@ width: 600px;
   color: #f5f5f5;
   height: 50px;
 }
+
+/* Tilauslomake */
+.tlomake{
+  font-size: x-large;
+  color: #f5f5f5;
+  font-family: 'Patrick Hand SC';
+  padding-bottom: 25px;
+  padding-bottom: 1px;
+}
+
 
 
     @media (min-width: 992px) {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, index } from 'react'
 import uuid from 'react-uuid';
-import '../Styles/Product.css'
+import "../App.css";
 import Cart from '../components/Cart';
 import axios from 'axios';
 
