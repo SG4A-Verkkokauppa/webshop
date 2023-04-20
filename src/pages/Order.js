@@ -1,7 +1,7 @@
 import React, { useState, useEffect, index } from 'react'
 import uuid from 'react-uuid';
 import "../App.css";
-import Cart from '../components/Cart';
+import Cart from '../components/Cart.js';
 import axios from 'axios';
 
 const URL = 'http://localhost:3001/';
@@ -44,7 +44,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
     const json = JSON.stringify({
       etunimi: firstName,
       sukunimi: lastName,
-      osoite: address,
+      toimitusosoite: address,
       postinumero: zip,
       city: city,
       cart: cart,
@@ -57,7 +57,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
     })
     .then(() => {
       empty();
-      setFinished (true);
+      setFinished(true);
     }).catch(error => {
       alert(error.response === undefined ? error : error.response.data.error);
     });}
@@ -111,6 +111,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
         </tbody>
       </table>
       {cart.length > 0 &&
+    <div className='tilaus'>  
     <>
     <h3 className="header">Tilauslomake</h3>
       <form onSubmit={order}>
@@ -139,11 +140,12 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
           <input className='form-control' value={city} onChange={e =>setCity(e.target.value)}/>
         </div>
   
-        <div>
-          <button className='button' type="button">Tilaa</button>
+    <div>
+    <button className='button' type="submit">Tilaa</button>
     </div>
     </form>
     </>
+    </div>
     
 }
     </div>
