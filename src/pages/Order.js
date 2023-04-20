@@ -1,7 +1,7 @@
 import React, { useState, useEffect, index } from 'react'
 import uuid from 'react-uuid';
 import "../App.css";
-import Cart from '../components/Cart';
+import Cart from '../components/Cart.js';
 import axios from 'axios';
 
 const URL = 'http://localhost:3001/';
@@ -44,7 +44,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
     const json = JSON.stringify({
       etunimi: firstName,
       sukunimi: lastName,
-      osoite: address,
+      toimitusosoite: address,
       postinumero: zip,
       city: city,
       cart: cart,
@@ -57,7 +57,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
     })
     .then(() => {
       empty();
-      setFinished (true);
+      setFinished(true);
     }).catch(error => {
       alert(error.response === undefined ? error : error.response.data.error);
     });}
@@ -136,7 +136,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
     </div>
   
     <div>
-    <button className='button' type="button">Tilaa</button>
+    <button className='button' type="submit">Tilaa</button>
     </div>
     </form>
     </>
