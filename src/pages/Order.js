@@ -104,7 +104,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
           })}
           <tr className='summa' key={uuid()}>
             <td></td>
-            <td></td>
+            <td>Yhteensä</td>
             <td>{sum.toFixed(2)} €</td>
             <td></td>
           </tr>
