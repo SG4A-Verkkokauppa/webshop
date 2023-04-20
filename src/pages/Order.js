@@ -135,7 +135,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
     </div>
   
     <div>
-      <button className='button' type="button">Tilaa</button>
+    <button className='button' type="button">Tilaa</button>
     </div>
     </form>
     </>
