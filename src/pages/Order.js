@@ -112,7 +112,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
       </table>
       {cart.length > 0 &&
     <>
-    <h3 className="header">Client information</h3>  <form onSubmit={order}>
+    <h3 className="header">Tilauslomake</h3>  <form onSubmit={order}>
     <div className='form-group'>
     <label className='tlomake'>Etunimi:</label>
     <input className='form-control' value={firstName} onChange={e =>setFirstName(e.target.value)}/>
