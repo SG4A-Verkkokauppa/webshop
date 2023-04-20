@@ -87,21 +87,21 @@ width: 600px;
 .euro{
   color: #000000;
   height: 50px;
-  border-bottom: 1.5px solid white;
+  border-bottom: 1.5px solid #000000;
   height: 125px;
 }
 
 .summa{
   font-weight: bold;
-  color: #f5f5f5;
+  color: #000000;
   height: 60px;
-  border-bottom: 1.5px solid white;
+  border-bottom: 1.5px solid #000000;
 }
 
 /* Tilauslomake */
 .tlomake{
   font-size: x-large;
-  color: #f5f5f5;
+  color: #000000;
   font-family: 'Patrick Hand SC';
   padding-bottom: 25px;
   padding-bottom: 1px;

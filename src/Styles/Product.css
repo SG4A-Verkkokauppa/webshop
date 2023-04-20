@@ -1,13 +1,13 @@
 .product {
     margin: 30px 30px 30px 250px;
     padding: 5px;
-    color: #f5f5f5;
+    color: #000000;
 }
 
 .otsikko {
     margin-top: 20px;
     display: block;
-    color: #f5f5f5;
+    color: #000000;
 }
 
 .product button {
@@ -38,6 +38,5 @@ h3 {
 .product-photo {
     width: 450px;
     height: 450px;
-    background-color: #717171;
     border-radius: 5px;
 }
