@@ -112,30 +112,35 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
       </table>
       {cart.length > 0 &&
     <>
-    <h3 className="header">Tilauslomake</h3>  <form onSubmit={order}>
-    <div className='form-group'>
-    <label className='tlomake'>Etunimi:</label>
-    <input className='form-control' value={firstName} onChange={e =>setFirstName(e.target.value)}/>
-    </div>
-    <div className='form-group'>
-    <label className='tlomake'>Sukunimi:</label>
-    <input className='form-control' value={lastName} onChange={e =>setLastName(e.target.value)}/>
-    </div>
-    <div className='form-group'>
-    <label className='tlomake'>Osoite:</label>
-    <input className='form-control' value={address} onChange={e =>setAddress(e.target.value)}/>
-    </div>
-    <div className='form-group'>
-    <label className='tlomake'>Postinumero:</label>
-    <input className='form-control' value={zip} onChange={e =>setZip(e.target.value)}/>
-    </div>
-    <div className='form-group'>
-    <label className='tlomake'>Postitoimipaikka:</label>
-    <input className='form-control' value={city} onChange={e =>setCity(e.target.value)}/>
-    </div>
+    <h3 className="header">Tilauslomake</h3>
+      <form onSubmit={order}>
+        <div className='etunimi'>
+          <label className='tlomake'>Etunimi:</label>
+          <input className='form-control' value={firstName} onChange={e =>setFirstName(e.target.value)}/>
+        </div>
+
+        <div className='sukunimi'>
+          <label className='tlomake'>Sukunimi:</label>
+          <input className='form-control' value={lastName} onChange={e =>setLastName(e.target.value)}/>
+        </div>
+
+        <div className='osoite'>
+          <label className='tlomake'>Osoite:</label>
+          <input className='form-control' value={address} onChange={e =>setAddress(e.target.value)}/>
+        </div>
+
+        <div className='postinro'>
+          <label className='tlomake'>Postinumero:</label>
+          <input className='form-control' value={zip} onChange={e =>setZip(e.target.value)}/>
+        </div>
+
+        <div className='postitmp'>
+          <label className='tlomake'>Postitoimipaikka:</label>
+          <input className='form-control' value={city} onChange={e =>setCity(e.target.value)}/>
+        </div>
   
-    <div>
-    <button className='button' type="button">Tilaa</button>
+        <div>
+          <button className='button' type="button">Tilaa</button>
     </div>
     </form>
     </>
