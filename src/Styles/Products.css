@@ -38,6 +38,11 @@ color:black;
     border: none;
 }
 
+.btn:hover{
+background-color: rgb(0, 0, 0);
+color: #ffda05;
+}
+
 h3{
     font-family: 'Patrick Hand SC', cursive;
 }

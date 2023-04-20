@@ -92,7 +92,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
                   />
                 </td>
                 <td>
-                  <a href='#' onClick={() => removeFromCart(product)}>
+                  <a href='#' onClick={() => removeFromCart(product)} className='poista'>
                     Poista ostoskorista
                   </a>
                 </td>

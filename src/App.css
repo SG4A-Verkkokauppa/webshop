@@ -109,6 +109,14 @@ padding-top: 30px;
   border-bottom: 1.5px solid #000000;
 }
 
+.poista{
+  color: #000000;
+}
+
+.poista:hover{
+  color: #ffda05;
+}
+
 /* Tilauslomake */
 .tlomake{
   font-size: x-large;
