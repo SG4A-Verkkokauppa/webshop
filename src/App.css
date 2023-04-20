@@ -65,10 +65,10 @@ padding-top: 30px;
   color: #141623;
 }
 
-/* .dropdown-menu a:hover {
-  color: #f5f5f5;
-  background-color :#1e2034;
-} */
+.dropdown-menu a:hover {
+  color: #ffda05;
+  background-color: none;
+}
 
 .navbar-nav{
   margin-left: 5px;
