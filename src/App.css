@@ -153,6 +153,14 @@ padding-top: 30px;
   border: 2px solid #1e2034;
 }
 
+.form-control a:hover{
+  border-color: #ffda05;
+}
+
+.form-control:hover{
+  border-color: #ffda05;
+}
+
     @media (min-width: 992px) {
     .card-registration-2 .bg-grey {
     border-top-right-radius: 16px;
