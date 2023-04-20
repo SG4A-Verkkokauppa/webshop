@@ -24,7 +24,7 @@ h3 {
 
 .tuotesivukuvaus {
     font-size: large;
-    color: #f5f5f5;
+    color: #000000;
     margin-top: 20px;
 }
 
@@ -38,13 +38,13 @@ h3 {
 .product-photo {
     width: 450px;
     height: 450px;
-    background-color: #f5f5f5;
+    background-color: #717171;
     border-radius: 5px;
 }
 
 .tlomake{
     font-size: x-large;
-    color: #f5f5f5;
+    color: #000000;
     font-family: 'Patrick Hand SC';
     padding-bottom: 25px;
     padding-bottom: 1px;

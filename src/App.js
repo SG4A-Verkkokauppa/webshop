@@ -17,7 +17,7 @@ import NotFound from "./pages/NotFound";
 
 
 
-document.body.style.backgroundColor = "#1e2034";
+document.body.style.backgroundColor = "#f5f5f5";
 // Backendin osoite! Päivitä jos muuttuu!
 const URL = 'http://localhost:3001/';
 
