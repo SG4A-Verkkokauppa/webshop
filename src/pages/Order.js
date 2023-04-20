@@ -133,8 +133,9 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
     <label className='tlomake'>Postitoimipaikka:</label>
     <input className='form-control' value={city} onChange={e =>setCity(e.target.value)}/>
     </div>
+  
     <div>
-      <button className='btn btn-primary' type="button">Tilaa</button>
+      <button className='button' type="button">Tilaa</button>
     </div>
     </form>
     </>
