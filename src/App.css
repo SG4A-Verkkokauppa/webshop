@@ -132,6 +132,7 @@ padding-top: 30px;
 }
 
 /* Tilauslomake */
+
 .tlomake{
   font-size: x-large;
   color: #000000;
@@ -158,7 +159,7 @@ padding-top: 30px;
 }
 
 .button{
-  margin-top: 50px;
+  margin-top: 20px;
   background-color: #ffda05;
     width: 140px;
     color: black;
@@ -172,9 +173,9 @@ padding-top: 30px;
 }
 
 .tilaus{
-  margin-top: 60px;
-  padding: 30px;
-  border: 2px solid #1e2034;
+  margin-top: 40px;
+
+  margin-left: 70px;
 }
 
 .form-control a:hover{

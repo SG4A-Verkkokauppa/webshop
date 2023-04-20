@@ -141,7 +141,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
         </div>
   
     <div>
-    <button className='button' type="submit">Tilaa</button>
+    <button className='button' type="submit" >Tilaa</button>
     </div>
     </form>
     </>
@@ -151,4 +151,3 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
     </div>
   )
 }
-
