@@ -7,6 +7,22 @@
 width: 600px;
 } */
 
+/* Gridcardien tyylit */
+.card-img-top{
+ max-width: 80%;
+ align-self: center;
+ padding-bottom: 10px;
+}
+
+.card{
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.card-title, .card-text{
+  margin-left: 20px;
+}
+
 .navbar {
   height: 100px;
   background-color: #1e2034;
@@ -98,10 +114,6 @@ width: 600px;
   font-family: 'Patrick Hand SC';
   padding-bottom: 25px;
   padding-bottom: 1px;
-}
-
-.Card{
-  size: 200px;
 }
 
 .button{
