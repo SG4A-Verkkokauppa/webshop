@@ -3,15 +3,14 @@
   size: auto;
 }
 
-.g-4{
+/* .g-4{
 width: 600px;
-}
+} */
 
 .navbar {
   height: 100px;
-  background-color: #141623;
+  background-color: #1e2034;
 }
-
 
 .row {
    padding-top: 50px;
@@ -49,10 +48,10 @@ width: 600px;
   color: #141623;
 }
 
-.dropdown-menu a:hover {
+/* .dropdown-menu a:hover {
   color: #f5f5f5;
   background-color :#1e2034;
-}
+} */
 
 .navbar-nav{
   margin-left: 15px;
@@ -63,7 +62,7 @@ width: 600px;
   list-style: none;
   font-size: 24px;
   align-items: baseline;
-  color: #FFFF05!important;
+  color: #ffda05!important;
   margin-bottom: 9px;
 }
 
@@ -77,12 +76,6 @@ width: 600px;
   color: #000000;
   padding-bottom: 10px;
 }
-
-/*Reima koitti saada säädettyä footeria, mutta tarttis muokata koko bodya*/
-/*.table{
-  min-height: 100%;
-  margin-bottom: -150px;
-}*/
 
 .euro{
   color: #000000;
@@ -105,6 +98,10 @@ width: 600px;
   font-family: 'Patrick Hand SC';
   padding-bottom: 25px;
   padding-bottom: 1px;
+}
+
+.Card{
+  size: 200px;
 }
 
 
