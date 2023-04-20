@@ -104,7 +104,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
           })}
           <tr className='summa' key={uuid()}>
             <td></td>
-            <td></td>
+            <td>Yhteensä</td>
             <td>{sum.toFixed(2)} €</td>
             <td></td>
           </tr>
@@ -112,7 +112,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
       </table>
       {cart.length > 0 &&
     <>
-    <h3 className="header">Client information</h3>  <form onSubmit={order}>
+    <h3 className="header">Tilauslomake</h3>  <form onSubmit={order}>
     <div className='form-group'>
     <label className='tlomake'>Etunimi:</label>
     <input className='form-control' value={firstName} onChange={e =>setFirstName(e.target.value)}/>
@@ -133,8 +133,9 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
     <label className='tlomake'>Postitoimipaikka:</label>
     <input className='form-control' value={city} onChange={e =>setCity(e.target.value)}/>
     </div>
+  
     <div>
-      <button className='btn btn-primary' type="button">Tilaa</button>
+      <button className='button' type="button">Tilaa</button>
     </div>
     </form>
     </>
