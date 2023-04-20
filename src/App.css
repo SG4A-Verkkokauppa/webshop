@@ -28,6 +28,10 @@ width: 600px;
   background-color: #1e2034;
 }
 /*navbar tyyli*/
+#basic-nav-dropdown{
+font-size: 25px;
+}
+
 .me-auto{
 padding-top: 30px;
 }
