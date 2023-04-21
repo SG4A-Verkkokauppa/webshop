@@ -8,15 +8,14 @@ const URL = 'http://localhost:3001/';
 
 export default function Order({cart, removeFromCart, updateAmount, changeAmount}) {
   const [inputs,_] = useState([]);
-  const [inputIndex, setInputIndex] = useState(-1);
-
+  const [inputIndex, setInputIndex] = useState(-1)
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
   const [address, setAddress] = useState("")
   const [zip, setZip] = useState("")
   const [city, setCity] = useState("")
-  const [finished, setFinished] = useState("")
-  const [empty, setEmpty] = useState("")
+  const [finished, setFinished] = useState(false)
+
 
   let sum = 0
 
@@ -56,12 +55,13 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
       }
     })
     .then(() => {
-      empty();
+      //empty(); Pitäs tyhjentää ostoskori, mutta tämmöstä funktiota ei ole olemassa joka sen tekis? Tää pitää laittaa myös ylimpään order functioon changeAmountin perään.
       setFinished(true);
     }).catch(error => {
       alert(error.response === undefined ? error : error.response.data.error);
     });}
 
+if (finished === false) {
   return (
     <div>
 
@@ -113,35 +113,30 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
       {cart.length > 0 &&
     <div className='tilaus'>  
     <>
-    <h3 className="header">Tilauslomake</h3>
-      <form onSubmit={order}>
-        <div className='etunimi'>
-          <label className='tlomake'>Etunimi:</label>
-          <input className='form-control' value={firstName} onChange={e =>setFirstName(e.target.value)}/>
-        </div>
-
-        <div className='sukunimi'>
-          <label className='tlomake'>Sukunimi:</label>
-          <input className='form-control' value={lastName} onChange={e =>setLastName(e.target.value)}/>
-        </div>
-
-        <div className='osoite'>
-          <label className='tlomake'>Osoite:</label>
-          <input className='form-control' value={address} onChange={e =>setAddress(e.target.value)}/>
-        </div>
-
-        <div className='postinro'>
-          <label className='tlomake'>Postinumero:</label>
-          <input className='form-control' value={zip} onChange={e =>setZip(e.target.value)}/>
-        </div>
-
-        <div className='postitmp'>
-          <label className='tlomake'>Postitoimipaikka:</label>
-          <input className='form-control' value={city} onChange={e =>setCity(e.target.value)}/>
-        </div>
+    <h3 className="header">Tilauslomake</h3>  <form onSubmit={order}>
+    <div className='form-group'>
+    <label className='tlomake'>Etunimi:</label>
+    <input className='form-control' value={firstName} onChange={e =>setFirstName(e.target.value)}/>
+    </div>
+    <div className='form-group'>
+    <label className='tlomake'>Sukunimi:</label>
+    <input className='form-control' value={lastName} onChange={e =>setLastName(e.target.value)}/>
+    </div>
+    <div className='form-group'>
+    <label className='tlomake'>Osoite:</label>
+    <input className='form-control' value={address} onChange={e =>setAddress(e.target.value)}/>
+    </div>
+    <div className='form-group'>
+    <label className='tlomake'>Postinumero:</label>
+    <input className='form-control' value={zip} onChange={e =>setZip(e.target.value)}/>
+    </div>
+    <div className='form-group'>
+    <label className='tlomake'>Postitoimipaikka:</label>
+    <input className='form-control' value={city} onChange={e =>setCity(e.target.value)}/>
+    </div>
   
     <div>
-    <button className='button' type="submit" >Tilaa</button>
+    <button className='button' type="submit">Tilaa</button>
     </div>
     </form>
     </>
@@ -150,4 +145,10 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
 }
     </div>
   )
+} else {
+  return (
+  <h3>Kiitos tilauksesta!</h3>
+  )
 }
+}
+
