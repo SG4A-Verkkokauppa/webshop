@@ -1,6 +1,13 @@
 .manage{
     color: #000000;
     margin-top: 80px;
+    margin-left: 200px;
+    border: 1px solid #000000;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    width: 500px;
+    height: 220px;
+    padding: 20px;
+  
 }
 
 label{
@@ -25,6 +32,9 @@ label{
 
 .buttons{
     margin-left: 175px;
+    padding: 10px;
+    
+    
 }
 
 .buttontwo{
