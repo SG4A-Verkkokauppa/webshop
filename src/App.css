@@ -8,11 +8,6 @@ width: 600px;
 } */
 
 /* Gridcardien tyylit */
-.card-img-top{
- max-width: 80%;
- align-self: center;
- padding-bottom: 10px;
-}
 
 .card{
   padding-top: 20px;
@@ -20,7 +15,12 @@ width: 600px;
 }
 
 .card-title, .card-text{
+  color: #000000;
   margin-left: 20px;
+}
+
+.card-title:hover{
+  color: #ffda05;
 }
 
 .navbar {
