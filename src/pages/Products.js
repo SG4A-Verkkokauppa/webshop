@@ -10,7 +10,8 @@ import {Link, useParams} from 'react-router-dom'
 export default function Products({url,addToCart}) {
   const [categoryName, setCategoryName] = useState('');
   const [products, setProducts] = useState([]);
-
+  const [name,setName]= useState('');
+  
   let params = useParams()
   useEffect(() => {
     let address = '';
