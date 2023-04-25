@@ -5,13 +5,15 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import React,{useState,useEffect} from 'react'; 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Cart from './Cart';
 import maaginenLogo from './images/maaginen-logo-v2.png';
 
 
 function BasicExample({url,cart}) {
   const [categories,setCategories] = useState([]);
+ const [search, setSearch] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get(url + 'products/categories.php')
@@ -24,6 +26,12 @@ function BasicExample({url,cart}) {
       })
   }, [])
 
+  function executeSearch(e) {
+    if (e.keyCode === 13){
+      e.preventDefault();
+      navigate('/search' + search);
+    }
+  }
 
   return (
     <Navbar className='navbar'>
@@ -53,12 +61,16 @@ function BasicExample({url,cart}) {
          
           <Form className="d-flex">
                   <Form.Control
+              
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  onKeyDown={(e) => executeSearch(e)}
                     type="search"
                     placeholder="Haku"
                     className="me-2"
-                    aria-label="Search"
+                    aria-label="Search" 
                   />
-                  <Button variant="outline-light" >Etsi</Button>
+          
                   </Form>               
                   <ul className='navbar-nav ml-auto'>
 

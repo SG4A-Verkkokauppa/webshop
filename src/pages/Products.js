@@ -13,6 +13,27 @@ export default function Products({url,addToCart}) {
 
   let params = useParams()
   useEffect(() => {
+    let address = '';
+
+    if (params.searchPhrase === undefined) {
+      address = url + 'products/products.php' + params.tuoteryhma_id;
+    } else {
+      address = url + 'products/searchproducts.php' + params.searchPhrase;
+    }
+
+    axios.get(address)
+    .then((response) => {
+      const json = response.data;
+      if (params.searchPhrase === undefined) {
+        setName(json.category);
+        setProducts(json.products);
+      } else {
+      setName(params.searchPhrase);
+      setProducts(json);
+      }
+    })
+  
+
     axios.get(url + 'products/products.php/' + params.tuoteryhma_id)
     .then((response)=>{
       const json = response.data
