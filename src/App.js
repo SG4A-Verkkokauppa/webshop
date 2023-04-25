@@ -13,7 +13,7 @@ import Manage from "./pages/Manage";
 import Order from "./pages/Order";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
-
+import GridCard from "./components/GridCard"
 
 
 
@@ -71,12 +71,13 @@ function App(){
           <Route path="/search/:searchPhrase" element={<Products url={URL}/>} />
 
           <Route path="/product/:tuotteen_id" element={<Product url={URL} addToCart={addToCart}/>} />
-          <Route path="/allproducts/" element={<Allproducts url={URL} />} />
+          <Route path="/allproducts/" element={<Allproducts url={URL} addToCart={addToCart}/>} />
           <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/Product" element={<Order cart={cart} />} />
           <Route path="/Manage" element={<Manage/>} />
+          <Route path="/GridCard" element={<GridCard/>}/>
         </Routes>
       </div>
       <Footer />

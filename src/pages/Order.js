@@ -114,24 +114,24 @@ if (finished === false) {
     <div className='tilaus'>  
     <>
     <h3 className="header">Tilauslomake</h3>  <form onSubmit={order}>
-    <div className='form-group'>
-    <label className='tlomake'>Etunimi:</label>
+    <div className='etunimi'>
+    <label className='tlomake'>etunimi:</label>
     <input className='form-control' value={firstName} onChange={e =>setFirstName(e.target.value)}/>
     </div>
-    <div className='form-group'>
-    <label className='tlomake'>Sukunimi:</label>
+    <div className='sukunimi'>
+    <label className='tlomake'>sukunimi:</label>
     <input className='form-control' value={lastName} onChange={e =>setLastName(e.target.value)}/>
     </div>
-    <div className='form-group'>
-    <label className='tlomake'>Osoite:</label>
+    <div className='osoite'>
+    <label className='tlomake'>osoite:</label>
     <input className='form-control' value={address} onChange={e =>setAddress(e.target.value)}/>
     </div>
-    <div className='form-group'>
-    <label className='tlomake'>Postinumero:</label>
+    <div className='postinro'>
+    <label className='tlomake'>postinumero:</label>
     <input className='form-control' value={zip} onChange={e =>setZip(e.target.value)}/>
     </div>
-    <div className='form-group'>
-    <label className='tlomake'>Postitoimipaikka:</label>
+    <div className='postitmp'>
+    <label className='tlomake'>postitoimipaikka:</label>
     <input className='form-control' value={city} onChange={e =>setCity(e.target.value)}/>
     </div>
   
@@ -147,7 +147,7 @@ if (finished === false) {
   )
 } else {
   return (
-  <h3>Kiitos tilauksesta!</h3>
+  <h3 className='kiitos'>Kiitos tilauksesta!</h3>
   )
 }
 }
