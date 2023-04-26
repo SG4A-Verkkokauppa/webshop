@@ -59,6 +59,10 @@ function App(){
     setCart(modifiedCart);
     localStorage.setItem('cart', JSON.stringify(modifiedCart));
   }
+  function emptyCart() {
+    setCart([]);
+    localStorage.removeItem('cart');
+  }
 
   
   return (
@@ -72,7 +76,7 @@ function App(){
 
           <Route path="/product/:tuotteen_id" element={<Product url={URL} addToCart={addToCart}/>} />
           <Route path="/allproducts/" element={<Allproducts url={URL} addToCart={addToCart}/>} />
-          <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
+          <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}empty={emptyCart} />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/Product" element={<Order cart={cart} />} />

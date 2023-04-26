@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const URL = 'http://localhost:3001/';
 
-export default function Order({cart, removeFromCart, updateAmount, changeAmount}) {
+export default function Order({cart, removeFromCart, updateAmount, changeAmount,empty}) {
   const [inputs,_] = useState([]);
   const [inputIndex, setInputIndex] = useState(-1)
   const [firstName, setFirstName] = useState("")
@@ -55,7 +55,7 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount}
       }
     })
     .then(() => {
-      //empty(); Pitäs tyhjentää ostoskori, mutta tämmöstä funktiota ei ole olemassa joka sen tekis? Tää pitää laittaa myös ylimpään order functioon changeAmountin perään.
+      empty();// Tyhjentää ostoskorin tilauksen jälkeen//
       setFinished(true);
     }).catch(error => {
       alert(error.response === undefined ? error : error.response.data.error);
