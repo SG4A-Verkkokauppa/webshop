@@ -67,9 +67,3 @@ export default function Products({url,addToCart}) {
     </div>
   )
 }
- {/*    <Link 
-            to={'/product/' + product.id}>
-              <p>
-                {product.name}
-              </p>
-          </Link> */}
