@@ -17,29 +17,28 @@ export default function Products({url,addToCart}) {
     let address = '';
 
     if (params.searchPhrase === undefined) {
-      address = url + 'products/products.php' + params.tuoteryhma_id;
+      address = url + 'products/products.php/' + params.tuoteryhma_id;
     } else {
-      address = url + 'products/searchproducts.php' + params.searchPhrase;
+      address = url + 'products/searchproducts.php/' + params.searchPhrase;
     }
 
     axios.get(address)
     .then((response) => {
       const json = response.data;
       if (params.searchPhrase === undefined) {
-        setName(json.category);
-        setProducts(json.products);
+        setCategoryName(json.Tuoteryhma);
+        setProducts(json.Tuotteet);
       } else {
-      setName(params.searchPhrase);
+      setCategoryName(params.searchPhrase);
       setProducts(json);
-      }
-    })
-  
-
-    axios.get(url + 'products/products.php/' + params.tuoteryhma_id)
+      console.log(json)
+      
+    }
+    /*axios.get(url + 'products/products.php/' + params.tuoteryhma_id)
     .then((response)=>{
       const json = response.data
       setCategoryName(json.Tuoteryhma)
-      setProducts(json.Tuotteet)
+      setProducts(json.Tuotteet)*/
     }).catch (error =>{
       alert(error.response === undefined ? error : error.response.data.error)
     })
@@ -52,7 +51,8 @@ export default function Products({url,addToCart}) {
     <div className='products'>
     {products.map(product => (
       <div className='tuotekortti' key={product.tuotteen_id}>
-         <div className='tuotekuva'><img className='photo' src={url+'images/' + product.kuva} alt="tuotekuva"/></div>
+        {<Link 
+            to={'/product/' + product.tuotteen_id}> <div className='tuotekuva'><img className='photo' src={url+'images/' + product.kuva} alt="tuotekuva"/></div> </Link> }
          {<Link 
             to={'/product/' + product.tuotteen_id}>
               <div className='tuotenimi'>

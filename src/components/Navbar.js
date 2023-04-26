@@ -13,6 +13,7 @@ import maaginenLogo from './images/maaginen-logo-v2.png';
 function BasicExample({url,cart}) {
   const [categories,setCategories] = useState([]);
  const [search, setSearch] = useState('');
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,8 +29,9 @@ function BasicExample({url,cart}) {
 
   function executeSearch(e) {
     if (e.keyCode === 13){
+      console.log(search)
       e.preventDefault();
-      navigate('/search' + search);
+      navigate('/search/' + search);
     }
   }
 
