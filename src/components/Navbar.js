@@ -29,7 +29,6 @@ function BasicExample({url,cart}) {
 
   function executeSearch(e) {
     if (e.keyCode === 13){
-      console.log(search)
       e.preventDefault();
       navigate('/search/' + search);
     }

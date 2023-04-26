@@ -10,7 +10,7 @@ import {Link, useParams} from 'react-router-dom'
 export default function Products({url,addToCart}) {
   const [categoryName, setCategoryName] = useState('');
   const [products, setProducts] = useState([]);
-  const [name,setName]= useState('');
+ 
   
   let params = useParams()
   useEffect(() => {
@@ -31,7 +31,6 @@ export default function Products({url,addToCart}) {
       } else {
       setCategoryName(params.searchPhrase);
       setProducts(json);
-      console.log(json)
       
     }
     /*axios.get(url + 'products/products.php/' + params.tuoteryhma_id)
