@@ -7,7 +7,6 @@ import axios from 'axios';
 import React,{useState,useEffect} from 'react'; 
 import { Link, useNavigate } from 'react-router-dom';
 import Cart from './Cart';
-import maaginenLogo from './images/maaginen-logo-v2.png';
 
 
 function BasicExample({url,cart}) {
@@ -37,7 +36,7 @@ function BasicExample({url,cart}) {
   return (
     <Navbar className='navbar'>
       <Container>
-      <Link className="navbar-brand" to="/"><img src={maaginenLogo}></img></Link>
+      <Link className="navbar-brand" to="/"><img src={require("./images/maaginen-logo-v2.png")}></img></Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

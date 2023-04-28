@@ -4,20 +4,10 @@ Nämä tyylit tulee Allproducts.js (Kaikki tuotteet) koska siellä on vielä toi
 */
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
 
-
-/* .products{
-margin-left: 200px;
-display: grid;
-flex-direction: column;
-flex-wrap: nowrap;
-} */
-
 .products{
 display: inline-grid;
-grid-template-columns: auto auto auto auto;
 grid-auto-flow: column;
 grid-auto-flow: row;
-/* display:flex; */
 grid-gap: 20px;
 color:black;
 }
@@ -69,3 +59,28 @@ h3{
     margin:auto;
     padding:10px;
 }
+
+@media screen and (min-width: 992px) {
+    .products{
+        grid-template-columns: auto auto auto auto;
+        }
+  }
+
+  @media screen and (max-width: 992px) {
+    .products{
+        grid-template-columns: auto auto auto;
+        }
+  }
+
+  @media screen and (max-width: 768px) {
+    .products{
+        grid-template-columns: auto auto;
+        }
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .products{
+        grid-template-columns: auto;
+        }
+  }
