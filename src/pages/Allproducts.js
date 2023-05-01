@@ -29,7 +29,9 @@ export default function Products({url,addToCart}) {
       <div className='products'>
       {products.map(product => (
       <div className='tuotekortti' key={product.tuotteen_id}>
-          <div className='tuotekuva'><img className='photo' src={url+'images/' + product.kuva} alt="tuotekuva"/></div>
+        {<Link 
+            to={'/product/' + product.tuotteen_id}>
+          <div className='tuotekuva'><img className='photo' src={url+'images/' + product.kuva} alt="tuotekuva"/></div> </Link>}
          {<Link 
             to={'/product/' + product.tuotteen_id}>
               <div className='tuotenimi'>
