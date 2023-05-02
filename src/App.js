@@ -73,7 +73,7 @@ function App(){
           <Route path="/search/:searchPhrase" element={<Products url={URL} addToCart={addToCart}/>} />
           <Route path="/Product/:tuotteen_id" element={<Product url={URL} addToCart={addToCart}/>} />
           <Route path="/allproducts/" element={<Allproducts url={URL} addToCart={addToCart}/>} />
-          <Route path="/Order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}empty={emptyCart} url={URL}/>} />
+          <Route path="/Order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}empty={emptyCart} />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/Product" element={<Order cart={cart} />} />
           <Route path="/Manage" element={<Manage/>} />
