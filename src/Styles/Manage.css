@@ -1,4 +1,4 @@
-.manage{
+.manage {
     color: #000000;
     margin-top: 80px;
     margin-left: 200px;
@@ -7,36 +7,31 @@
     width: 500px;
     height: 220px;
     padding: 20px;
-  
 }
 
-label{
+label {
     padding: 20px;
-
 }
 
-.mb{
+.mb {
     margin: 20px;
-
 }
 
-#add{
+#add {
     margin-left: 90px;
-    margin-bottom: 40px ;
+    margin-bottom: 40px;
 }
 
-#safe{
+#safe {
     margin-left: 150px;
-    margin-bottom: 40px ;
+    margin-bottom: 40px;
 }
 
-.buttons{
+.buttons {
     margin-left: 175px;
     padding: 10px;
-    
-    
 }
 
-.buttontwo{
+.buttontwo {
     margin-left: 15px;
 }
