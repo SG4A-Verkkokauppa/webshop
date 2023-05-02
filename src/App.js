@@ -11,7 +11,6 @@ import Product from "./pages/Product";
 import Allproducts from "./pages/Allproducts";
 import Manage from "./pages/Manage";
 import Order from "./pages/Order";
-import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import GridCard from "./components/GridCard";
 
@@ -71,11 +70,10 @@ function App(){
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="products/:tuoteryhma_id" element={<Products url={URL} addToCart={addToCart} />} />
-          <Route path="/search/:searchPhrase" element={<Products url={URL}/>} />
+          <Route path="/search/:searchPhrase" element={<Products url={URL} addToCart={addToCart}/>} />
           <Route path="/product/:tuotteen_id" element={<Product url={URL} addToCart={addToCart}/>} />
           <Route path="/allproducts/" element={<Allproducts url={URL} addToCart={addToCart}/>} />
           <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}empty={emptyCart} />} />
-          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/Product" element={<Order cart={cart} />} />
           <Route path="/Manage" element={<Manage/>} />
