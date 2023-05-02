@@ -3,9 +3,9 @@ import uuid from 'react-uuid';
 import "../App.css";
 import axios from 'axios';
 
-//const URL = 'http://localhost:3001/';
+const URL = 'http://localhost:3001/';
 
-export default function Order({cart, removeFromCart, updateAmount, changeAmount,empty,URL}) {
+export default function Order({cart, removeFromCart, updateAmount, changeAmount,empty}) {
   const [inputs,_] = useState([]);
   const [inputIndex, setInputIndex] = useState(-1)
   const [firstName, setFirstName] = useState("")
