@@ -1,12 +1,11 @@
-import '../Styles/Products.css'
-import React from 'react'
-import axios from 'axios'
-import {useState, useEffect} from 'react'
-import {Link, useParams} from 'react-router-dom'
+import '../Styles/Products.css';
+import React from 'react';
+import axios from 'axios';
+import {useState, useEffect} from 'react';
+import {Link, useParams} from 'react-router-dom';
+
 
 // Tuotteiden näyttäminen tuoteryhmän mukaan:
-
-
 export default function Products({url,addToCart}) {
   const [categoryName, setCategoryName] = useState('');
   const [products, setProducts] = useState([]);
@@ -31,13 +30,8 @@ export default function Products({url,addToCart}) {
       } else {
       setCategoryName(params.searchPhrase);
       setProducts(json);
-      
     }
-    /*axios.get(url + 'products/products.php/' + params.tuoteryhma_id)
-    .then((response)=>{
-      const json = response.data
-      setCategoryName(json.Tuoteryhma)
-      setProducts(json.Tuotteet)*/
+
     }).catch (error =>{
       alert(error.response === undefined ? error : error.response.data.error)
     })

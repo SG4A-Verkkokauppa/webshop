@@ -13,8 +13,7 @@ import Manage from "./pages/Manage";
 import Order from "./pages/Order";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
-import GridCard from "./components/GridCard"
-
+import GridCard from "./components/GridCard";
 
 
 document.body.style.backgroundColor = "#f5f5f5";
@@ -73,7 +72,6 @@ function App(){
           <Route path="/" element={<Home />} />
           <Route path="products/:tuoteryhma_id" element={<Products url={URL} addToCart={addToCart} />} />
           <Route path="/search/:searchPhrase" element={<Products url={URL}/>} />
-
           <Route path="/product/:tuotteen_id" element={<Product url={URL} addToCart={addToCart}/>} />
           <Route path="/allproducts/" element={<Allproducts url={URL} addToCart={addToCart}/>} />
           <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}empty={emptyCart} />} />

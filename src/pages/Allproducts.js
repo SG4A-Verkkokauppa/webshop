@@ -2,8 +2,8 @@
 import React from 'react'
 import axios from 'axios'
 import {useState, useEffect} from 'react'
-import {Link, useParams} from 'react-router-dom'
-import { Row, Col, Container } from "react-bootstrap";
+import {Link} from 'react-router-dom'
+
 
 // Tuotteiden näyttäminen tuoteryhmän mukaan:
 
@@ -11,8 +11,6 @@ import { Row, Col, Container } from "react-bootstrap";
 export default function Products({url,addToCart}) {
   const [products, setProducts] = useState([])
 
-  //let params = useParams()
-  //console.log(params.tuoteryhma_id);
   useEffect(() => {
     axios.get(url + 'products/allproducts.php/')
     .then((response)=>{

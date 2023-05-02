@@ -1,7 +1,6 @@
 import React, { useState, useEffect, index } from 'react'
 import uuid from 'react-uuid';
 import "../App.css";
-import Cart from '../components/Cart.js';
 import axios from 'axios';
 
 const URL = 'http://localhost:3001/';

@@ -3,10 +3,6 @@ import React, { useState } from 'react'
 import CategoryLists from '../components/CategoryLists';
 import '../Styles/Manage.css'
   
-
-
-
-
 export default function Manage() {
     const [newCategory, setNewCategory] = useState("")
     const [selectedCategory,setSelectedCategory ] = useState(null)
