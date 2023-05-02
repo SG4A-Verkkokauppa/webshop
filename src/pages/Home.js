@@ -15,7 +15,7 @@ function App() {
               <HomeCarousel />
           </Col>
         </Row>
-<div className="introduce"> Kaipaatko magiaa arkeesi? Verkkokaupastamme löydät maagisen hyviä tuotteita arjen jokaiseen spesiaali hetkeen! Tervetuloa ostoksille!</div>
+<div className="introduce"> Kaipaatko magiaa arkeesi? <br></br>Verkkokaupastamme löydät maagisen hyviä tuotteita arjen jokaiseen spesiaali hetkeen!<br></br> Tervetuloa ostoksille!</div>
         <Row className="Gridcard">
           <Col>
               <GridCard />

@@ -6,7 +6,9 @@
 
 /* home.js esittely*/
 .introduce {
-
+  font-family: 'Patrick Hand SC';
+  font-size: xx-large;
+  text-align: center;
 }
 
 /* Gridcardien tyylit */
