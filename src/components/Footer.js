@@ -10,6 +10,8 @@ export default function Footer() {
     </div>
     <div>
     <table>
+      <thead></thead>
+      <tbody>
             <tr>
                 <th>MAAGISTA.FI OY</th>
                 <th>OTA YHTEYTTÄ</th>
@@ -27,7 +29,7 @@ export default function Footer() {
                       to={'/Manage'}>Ylläpito
                     </Link>}</td>
             </tr>
-          
+            </tbody>
 
     </table>
     </div>
