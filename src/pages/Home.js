@@ -17,13 +17,13 @@ function App() {
         </Row>
 <div className="introduce"> Kaipaatko magiaa arkeesi? <br></br>Verkkokaupastamme löydät maagisen hyviä tuotteita arjen jokaiseen spesiaali hetkeen!<br></br> Tervetuloa ostoksille!</div>
 
+<div className="gridTitle">Suosituimpia tuotteitamme</div>
 
-        <Row className="Gridcard">
-        <div className="gridTitle">Suosituimpia tuotteitamme</div>
+
           <Col>
               <GridCard />
           </Col>
-        </Row>
+     
       </Container>
     </>
   );
