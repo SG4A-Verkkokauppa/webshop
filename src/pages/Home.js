@@ -16,7 +16,10 @@ function App() {
           </Col>
         </Row>
 <div className="introduce"> Kaipaatko magiaa arkeesi? <br></br>Verkkokaupastamme löydät maagisen hyviä tuotteita arjen jokaiseen spesiaali hetkeen!<br></br> Tervetuloa ostoksille!</div>
+
+
         <Row className="Gridcard">
+        <div className="gridTitle">efeasdtrgrththrtrh</div>
           <Col>
               <GridCard />
           </Col>
