@@ -7,6 +7,9 @@ const data = [
     image: require('./images/kultamuki.png'),
   },
   {
+    image: require('./images/puhdistusliina-mainos.png'),
+  },
+  {
     image: require('./images/1mainos.png'),
   },
   {
