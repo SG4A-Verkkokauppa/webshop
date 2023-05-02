@@ -17,8 +17,11 @@
 .gridTitle{
   margin-bottom: 0px;
   border: 1px solid gray;
-  border-radius: 2px;
+  border-radius: 3px;
   font-family: 'Patrick Hand SC';
+  text-align: center;
+  font-size: larger;
+  
 }
 .card {
   padding-top: 20px;

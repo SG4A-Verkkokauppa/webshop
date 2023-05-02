@@ -19,7 +19,7 @@ function App() {
 
 
         <Row className="Gridcard">
-        <div className="gridTitle">efeasdtrgrththrtrh</div>
+        <div className="gridTitle">Suosituimpia tuotteitamme</div>
           <Col>
               <GridCard />
           </Col>
