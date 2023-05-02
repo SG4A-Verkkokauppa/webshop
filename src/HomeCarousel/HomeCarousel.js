@@ -1,20 +1,20 @@
 
-import React, {useState} from "react"; 
+import React, { useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 
 const data = [
   {
-   image: require('./images/kultamuki.png'), 
+    image: require('./images/kultamuki.png'),
   },
   {
-    image:require('./images/1mainos.png'), 
-   },
-   {
-    image:require('./images/2mainos.png'), 
-   },
-   {
-    image:require('./images/3mainos.png'), 
-   }
+    image: require('./images/1mainos.png'),
+  },
+  {
+    image: require('./images/2mainos.png'),
+  },
+  {
+    image: require('./images/3mainos.png'),
+  }
 ]
 
 function HomeCarousel() {
@@ -24,22 +24,21 @@ function HomeCarousel() {
   };
 
   return (
-    
+
     <Carousel activeIndex={index} onSelect={handleSelect} className="karuselli">
-       {data.map((slide, i) => {
+      {data.map((slide, i) => {
         return (
-          <Carousel.Item>        
-        <img
-          className="d-block w-100"
-          src={slide.image}
-          alt="slider image"
-        />
-      </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={slide.image}
+              alt="slider image"
+            />
+          </Carousel.Item>
         )
       })}
-      
     </Carousel>
-    
+
   );
 }
 
