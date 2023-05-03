@@ -8,7 +8,7 @@ export default function Manage() {
     const [selectedCategory,setSelectedCategory ] = useState(null)
     const [addingCategory, setAddingCategory] = useState(false)
     // Muista päivittää tämä url jos backend muuttuu!
-    const URL = 'http://localhost:3001/';
+    const URL = './app/';
 
     function saveCategory(e) {
         e.preventDefault();

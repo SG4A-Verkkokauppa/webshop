@@ -17,7 +17,7 @@ import GridCard from "./components/GridCard";
 
 document.body.style.backgroundColor = "#f5f5f5";
 // Backendin osoite! Päivitä jos muuttuu!
-const URL = 'http://localhost:3001/';
+const URL = './app/';
 
 function App(){
   const [cart, setCart] = useState([]);
