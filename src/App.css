@@ -191,6 +191,7 @@
   color: black;
   padding: 5px;
   border: none;
+  border-radius: 5px;
 }
 
 .button:hover {
@@ -217,11 +218,25 @@
   border-color: #ffda05;
 }
 
+.postisumma{
+font-weight: normal;
+font-size: smaller;
+}
+
 .kiitos {
   margin-top: 50px;
   text-align: center;
   font-size: 50px;
 }
+
+/*not found*/
+.hups{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Patrick Hand SC';
+}
+
 
 @media (min-width: 992px) {
   .card-registration-2 .bg-grey {

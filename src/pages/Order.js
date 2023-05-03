@@ -102,10 +102,11 @@ if (finished === false) {
             )
           })}
           <tr className='summa' key={uuid()}>
-            <td></td>
+          <td></td>
             <td>Yhteensä</td>
             <td>{sum.toFixed(2)} €</td>
             <td></td>
+            <td className='postisumma'>Postimaksut alk. 4.90e</td>
           </tr>
         </tbody>
       </table>
