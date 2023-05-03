@@ -1,4 +1,4 @@
-import React, { useState, useEffect, index } from 'react'
+import React, { useState, useEffect} from 'react'
 import uuid from 'react-uuid';
 import "../App.css";
 import axios from 'axios';
@@ -72,7 +72,7 @@ if (finished === false) {
             <td></td>
             <td></td>
           </tr>
-          {cart.map(product => {
+          {cart.map((product, index) => {
             sum+=parseFloat(product.amount * product.hinta);
             return (
               <tr className='euro' key={uuid()}>
