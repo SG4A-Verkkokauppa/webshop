@@ -8,15 +8,6 @@ const data = [
   },
   {
     image: require('./images/puhdistusliina-mainos.png'),
-  },
-  {
-    image: require('./images/1mainos.png'),
-  },
-  {
-    image: require('./images/2mainos.png'),
-  },
-  {
-    image: require('./images/3mainos.png'),
   }
 ]
 
