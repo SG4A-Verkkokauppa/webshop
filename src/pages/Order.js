@@ -3,7 +3,7 @@ import uuid from 'react-uuid';
 import "../App.css";
 import axios from 'axios';
 
-const URL = './app/';
+const URL = 'http://localhost:3001/';
 
 export default function Order({cart, removeFromCart, updateAmount,empty}) {
   const [inputs,] = useState([]);
