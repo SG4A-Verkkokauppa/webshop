@@ -1,12 +1,12 @@
-import React, { useState, useEffect, index } from 'react'
+import React, { useState, useEffect} from 'react'
 import uuid from 'react-uuid';
 import "../App.css";
 import axios from 'axios';
 
 const URL = 'http://localhost:3001/';
 
-export default function Order({cart, removeFromCart, updateAmount, changeAmount,empty}) {
-  const [inputs,_] = useState([]);
+export default function Order({cart, removeFromCart, updateAmount,empty}) {
+  const [inputs,] = useState([]);
   const [inputIndex, setInputIndex] = useState(-1)
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
@@ -22,14 +22,14 @@ export default function Order({cart, removeFromCart, updateAmount, changeAmount,
     for (let i = 0; i < cart.length; i++) {
       inputs[i] = React.createRef()
     }
-  }, [cart.length])
+  }, [cart.length,inputs])
 
   useEffect(() => {
     if (
       inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
       inputs[inputIndex].current.focus()
     }
-  }, [cart])
+  }, [cart,inputs,inputIndex])
 
   function changeAmount(e,product,index) {
     updateAmount(e.target.value,product);
@@ -72,7 +72,7 @@ if (finished === false) {
             <td></td>
             <td></td>
           </tr>
-          {cart.map(product => {
+          {cart.map((product, index) => {
             sum+=parseFloat(product.amount * product.hinta);
             return (
               <tr className='euro' key={uuid()}>
